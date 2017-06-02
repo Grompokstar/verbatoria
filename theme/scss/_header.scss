@@ -8,5 +8,49 @@ header {
   left: 0;
   background-color: $white;
   padding: $padding-xlg $padding-xxl;
-  min-height: $header-height;
+  box-shadow: 0 2px 5px 0 #ccc
+}
+
+.header-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-flex-item {
+  margin: 0 $margin-lg;
+  flex-grow: 1;
+}
+
+.header__logo {
+  flex-grow: 1000;
+}
+
+.header__link {
+  a {
+    color: inherit;
+    text-transform: uppercase;
+    font-size: rem-calc(14);
+    font-weight: bold;
+  }
+}
+
+.header__phone {
+  color: $success;
+  line-height: rem-calc(18);
+}
+
+.header__chose-location {
+  font-size: rem-calc(13);
+  color: $gray;
+  font-weight: bold;
+  cursor: pointer;
+
+  .fa {
+    font-weight: normal;
+    font-size: rem-calc(20);
+    line-height: rem-calc(20);
+    margin-left: $margin-sm ;
+    vertical-align: bottom;
+  }
 }

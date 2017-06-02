@@ -57,3 +57,28 @@ button[type="submit"] {
 .container {
   max-width: rem-calc(1200);
 }
+
+button.round-button {
+  @include border-radius(25px);
+  font-size: rem-calc(14);
+  font-weight: bold;
+  border: rem-calc(2) solid $default-border-color;
+  height: rem-calc(36);
+  padding: 0 $padding-lg;
+  text-transform: uppercase;
+
+  &.success {
+    border-color: $success;
+    color: $white;
+    background-color: $success;
+
+    &:hover {
+      color: $success;
+      background-color: $white;
+    }
+
+    &:active {
+      background-color: $active-button-bg;
+    }
+  }
+}

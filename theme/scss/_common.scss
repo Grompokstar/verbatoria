@@ -1,0 +1,59 @@
+@import "variables";
+
+html,
+body {
+  font-size: 16px;
+
+  * {
+    outline: none !important;
+  }
+}
+
+body {
+  background-color: $bg-color;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  @include border-radius($def-br);
+  border: rem-calc(2) solid $default-border-color;
+  height: rem-calc(48);
+  font-size: rem-calc(20);
+  padding: $padding-sm $padding-md;
+}
+
+button[type="button"],
+button[type="submit"] {
+  @include border-radius($def-br);
+  border: rem-calc(2) solid $default-border-color;
+  height: rem-calc(48);
+  padding: $padding-sm $padding-md;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: rem-calc(16);
+
+  &.btn-success {
+    border-color: $success;
+    color: $success;
+
+    &:hover {
+      border-color: darken($success, 10%);
+      color: darken($success, 10%);
+    }
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button[type="button"],
+button[type="submit"] {
+  &:focus {
+    border-color: $success;
+  }
+}
+
+.container {
+  max-width: rem-calc(1200);
+}

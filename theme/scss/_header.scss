@@ -1,0 +1,12 @@
+@import "variables";
+
+header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: $white;
+  padding: $padding-xlg $padding-xxl;
+  min-height: $header-height;
+}

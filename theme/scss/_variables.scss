@@ -1,0 +1,35 @@
+@import "mixins";
+
+$bg-color: #f5f5f5;
+$white: #ffffff;
+
+/* FONT */
+$default-font-size: 16;
+
+/* BORDER */
+$def-br: rem-calc(6); //border-radius
+$default-border-color: #c1c1c1;
+
+/* HEADER */
+$header-height: rem-calc(88);
+
+/* COLORS */
+$success: #46c573;
+
+/* PADDINGS */
+$padding-xs: rem-calc(5);
+$padding-sm: rem-calc(10);
+$padding-md: rem-calc(15);
+$padding-lg: rem-calc(20);
+$padding-xlg: rem-calc(25);
+$padding-xl: rem-calc(30);
+$padding-xxl: rem-calc(35);
+
+/* MARGINS */
+$margin-xs: rem-calc(5);
+$margin-sm: rem-calc(10);
+$margin-md: rem-calc(15);
+$margin-lg: rem-calc(20);
+$margin-xlg: rem-calc(25);
+$margin-xl: rem-calc(30);
+$margin-xxl: rem-calc(35);

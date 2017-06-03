@@ -2,8 +2,6 @@
 
 $bg-color: #f5f5f5;
 $white: #ffffff;
-$active-button-bg: #f5f5f5;
-$gray: #c1c1c1;
 
 /* FONT */
 $default-font-size: 16;
@@ -17,6 +15,9 @@ $header-height: rem-calc(88);
 
 /* COLORS */
 $success: #46c573;
+$success-light: rgba(70, 196, 115, 0.51);
+$active-button-bg: #f5f5f5;
+$gray: #c1c1c1;
 
 /* PADDINGS */
 $padding-xs: rem-calc(5);

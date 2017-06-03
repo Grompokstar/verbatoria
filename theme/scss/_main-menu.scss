@@ -1,0 +1,104 @@
+@import "variables";
+
+.main-menu {
+  background-color: $bg-color;
+  padding: $padding-xxl 0;
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+}
+
+.header_verbatoria-tree-img {
+  margin-bottom: -(rem-calc(36));
+  padding-left: rem-calc(90);
+}
+
+.main-menu-title {
+  font-size: rem-calc(18);
+  font-weight: bold;
+}
+
+ul.main-menu-link-list {
+  padding-left: 0;
+  list-style-type: none;
+  font-size: rem-calc(14);
+
+  li {
+    margin-top: $margin-md;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+
+      border-bottom: solid 2px $success;
+    }
+  }
+}
+
+.main-menu-btn {
+  border: rem-calc(1) solid $gray;
+  height: rem-calc(36);
+  width: rem-calc(36);
+  color: $gray;
+  background-color: $white;
+  text-transform: uppercase;
+
+  &.circle {
+    @include border-radius(50%)
+  }
+
+  &:hover {
+    color: $success;
+    border-color: $success;
+    background-color: $success;
+
+    #Header, #btn_closeMainMenu {
+      fill: $white;
+    }
+  }
+
+  &:active {
+    background-color: $success-light;
+    border-color: $success-light;
+
+    #Header, #btn_closeMainMenu {
+      fill: $white;
+    }
+  }
+
+  &.close {
+    background-color: $active-button-bg;
+    color: $success;
+
+    &:hover {
+      background-color: $success;
+      color: $white;
+    }
+
+    &:active {
+      color: $white;
+      background-color: $success-light;
+    }
+  }
+  svg {
+    display: none;
+    cursor: pointer;
+    margin-left: 3px;
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}

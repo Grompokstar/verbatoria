@@ -5,12 +5,20 @@
   <title>Verbatoria.ru</title>
   <link rel="stylesheet" type="text/css" href="theme/css/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="theme/css/theme.css">
+
+  <script src="js/libs/jquery-3.2.1.min.js"></script>
+  <script src="js/scripts.js"></script>
 </head>
 <body class="page">
   <header>
     <div class="container">
       <div class="header-flex-container">
-        <div class="header-flex-item header__logo">
+        <div class="header-language-menu">
+          <button class="language-btn circle">
+            ру
+          </button>
+        </div>
+        <div class="header__logo">
           <img src="theme/images/Home/verbatoria_logo.svg" width="211" alt="Логотип Вербатория"/>
         </div>
         <div class="header-flex-item header__link">
@@ -32,9 +40,72 @@
             Москва<span class="fa fa-angle-down"></span>
           </div>
         </div>
+        <div class="header-flex-item">
+          <button class="main-menu-btn circle" onclick="toggleVisibilityMainMenu()">
+            <svg  class="visible" width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <title>mainMenu_icn</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Header" transform="translate(-948.000000, -37.000000)" fill="#46C573">
+                  <g id="mainMenu_icn" transform="translate(948.000000, 37.000000)">
+                    <rect id="rect3" x="0" y="0" width="16" height="2"></rect>
+                    <rect id="rect2" x="0" y="6" width="16" height="2"></rect>
+                    <rect id="rect1" x="0" y="12" width="16" height="2"></rect>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <title>close_icn</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="btn_closeMainMenu" transform="translate(-10.000000, -10.000000)" fill="#46C573">
+                  <path d="M18,16.2222223 L11.7777777,10 L10,11.7777777 L16.2222223,18 L10,24.2222223 L11.7777777,26 L18,19.7777777 L24.2222223,26 L26,24.2222223 L19.7777777,18 L26,11.7777777 L24.2222223,10 L18,16.2222223 Z" id="close_icn"></path>
+                </g>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="main-menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="header_verbatoria-tree-img">
+              <img src="theme/images/Home/verbatoria_tree.svg"  height="250" alt="Дерево Вербатория"/>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="main-menu-title">
+              Диагностика таланта
+            </div>
+            <ul class="main-menu-link-list">
+              <li><a href="#">4-7 лет: Гармоничное развитие</a> </li>
+              <li><a href="#">7-11 лет: Выбор школы и класса</a> </li>
+              <li><a href="#">11-14 лет: Образовательный маршрут</a> </li>
+              <li><a href="#">14-17 лет: Выбор профессии</a> </li>
+              <li><a href="#">17+: Кто Я?</a> </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <div class="main-menu-title">
+              Партнерам
+            </div>
+            <ul class="main-menu-link-list">
+              <li><a href="#">Предпринимателям</a> </li>
+              <li><a href="#">Руководителям детских учреждений</a> </li>
+              <li><a href="#">Психологам</a> </li>
+              <li><a href="#">HR Директорам</a> </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </header>
+  <div class="overlay"></div>
 
   <div class="container">
     <div class="row">

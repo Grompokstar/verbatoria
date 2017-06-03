@@ -7,19 +7,27 @@ header {
   right: 0;
   left: 0;
   background-color: $white;
-  padding: $padding-xlg $padding-xxl;
-  box-shadow: 0 2px 5px 0 #ccc
+  box-shadow: 0 2px 5px 0 #ccc;
+
+  .container {
+    position: relative;
+  }
 }
 
 .header-flex-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: $padding-xlg 0;
 }
 
 .header-flex-item {
-  margin: 0 $margin-lg;
+  margin: 0 $margin-sm;
   flex-grow: 1;
+
+  &:last-child {
+    margin-left: rem-calc(56);
+  }
 }
 
 .header__logo {
@@ -32,12 +40,18 @@ header {
     text-transform: uppercase;
     font-size: rem-calc(14);
     font-weight: bold;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom: solid 2px $success;
+    }
   }
 }
 
 .header__phone {
   color: $success;
   line-height: rem-calc(18);
+  font-weight: bold;
 }
 
 .header__chose-location {
@@ -52,5 +66,34 @@ header {
     line-height: rem-calc(20);
     margin-left: $margin-sm ;
     vertical-align: bottom;
+  }
+}
+
+.header-language-menu {
+  position: absolute;
+  top: 1px;
+  top: rem-calc(25);
+  right: rem-calc(75);
+}
+
+.language-btn {
+  border: rem-calc(1) solid $gray;
+  height: rem-calc(36);
+  width: rem-calc(36);
+  color: $gray;
+  background-color: $white;
+  text-transform: uppercase;
+
+  &.circle {
+    @include border-radius(50%)
+  }
+
+  &:hover {
+    color: $success;
+    border-color: $success;
+  }
+
+  &:active {
+    background-color: $active-button-bg;
   }
 }

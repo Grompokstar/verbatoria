@@ -13,6 +13,14 @@ body {
   background-color: $bg-color;
 }
 
+.hide {
+  display: none;
+}
+
+.visible {
+  display: block !important;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -58,8 +66,8 @@ button[type="submit"] {
   max-width: rem-calc(1200);
 }
 
-button.round-button {
-  @include border-radius(25px);
+.round-button {
+  @include border-radius(18px);
   font-size: rem-calc(14);
   font-weight: bold;
   border: rem-calc(2) solid $default-border-color;

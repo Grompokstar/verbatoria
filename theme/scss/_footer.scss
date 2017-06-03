@@ -6,6 +6,7 @@ footer {
   min-height: $header-height;
   font-size: rem-calc(12);
   font-weight: bold;
+  z-index: 8;
 
   a {
     color: inherit;

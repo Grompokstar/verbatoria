@@ -19,7 +19,9 @@
           </button>
         </div>
         <div class="header__logo">
-          <img src="theme/images/Home/verbatoria_logo.svg" width="211" alt="Логотип Вербатория"/>
+          <a href="index.html">
+            <img src="theme/images/Home/verbatoria_logo.svg" width="211" alt="Логотип Вербатория"/>
+          </a>
         </div>
         <div class="header-flex-item header__link">
           <a href="#">О методе</a>
@@ -41,7 +43,7 @@
           </div>
         </div>
         <div class="header-flex-item">
-          <button class="main-menu-btn circle" onclick="toggleVisibilityMainMenu()">
+          <button class="main-menu-btn circle">
             <svg  class="visible" width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <title>mainMenu_icn</title>
               <desc>Created with Sketch.</desc>
@@ -96,7 +98,7 @@
             </div>
             <ul class="main-menu-link-list">
               <li><a href="#">Предпринимателям</a> </li>
-              <li><a href="#">Руководителям детских учреждений</a> </li>
+              <li><a href="head_of_kindergarten.html">Руководителям детских учреждений</a> </li>
               <li><a href="#">Психологам</a> </li>
               <li><a href="#">HR Директорам</a> </li>
             </ul>
@@ -107,98 +109,69 @@
   </header>
   <div class="overlay"></div>
 
-  <div class="container">
-    <div class="row">
-      <div class="page-title col-md-12">
-        <div class="page-title__text">
-          <div class="page-title__subText">Если вы</div>
-          <div class="page-title__mainText">Руководитель детского учреждения</div>
-        </div>
-        <div class="page-title__img">
-          <img src="theme/images/Partners/ceo_icn.svg" alt="">
-        </div>
-      </div>
+  <div class="video-slider">
+    <div class="slider-img"></div>
+    <div class="slider-overlay"></div>
+    <div class="slider-circles">
+      <div class="circle active"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
     </div>
-  </div>
 
-  <div class="page-block">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-6">
-          <div class="page-list">
-            <div class="page-list-title">Вы:</div>
-            <ul class="green-bullet">
-              <li>Предлагаете свои клиентам нейрометрические измерения</li>
-              <li>Собираете разовую оплату за измерения</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-6">
-          <div class="page-list">
-            <div class="page-list-title">Мы:</div>
-            <ul class="orange-bullet">
-              <li>Проводим выездную сессию  для измерений на Вашей площадке сертифицированным нейрометристом</li>
-              <li>Высылаем индивидуальные результаты Вам и родителям и при необходимости консультируем клиентов</li>
-              <li>Взимаем нашу часть платы за измерения</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="page-block__results">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-6">
-          <div class="page-block-results-img">
-            <img src="theme/images/Partners/photos/001.png" alt=""/>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-6">
-          <div class="page-list">
-            <div class="page-list-title">Ожидаемые результаты</div>
-            <ul class="check-icon">
-              <li>
-                <span class="check-icon-text">Вы сможете лучше узнать Ваших подопечных и составить для них
-                  индивидуальные программы обучени</span>
-              </li>
-              <li>
-                <span class="check-icon-text">Получите дополнительные аргументы в общении с родителями</span>
-              </li>
-              <li>
-                <span class="check-icon-text">Выгодно отличитесь от Ваших конкурентов</span>
-              </li>
-              <li>
-                <span class="check-icon-text">Получите дополнительную прибыль от существующих клиентов</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="page-block">
-    <div class="common-feedback">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="common-feedback__text">
-              Если вы заинтересованы в партнерстве с Вербаторией,
-              оставьте заявку и мы свяжемся с вами уже сегодня
-            </div>
-            <div class="common-feedback__form">
-              <form action="" method="post">
-                <input type="text" name="name" placeholder="Ваше имя">
-                <input type="text" name="contact" placeholder="Номер телефона или email">
-                <button class="btn-success" type="submit">Отправить</button>
-              </form>
+    <div class="video-slider__text show">
+      <div class="text-item">
+        <div class="container">
+          <div class="text-padding">
+            <h2 class="video-slider__text-title">Диагностика таланта</h2>
+            <div class="video-slider__regular-text">
+              Определяем способности к математике, творчеству, языкам, музыке и спорту на основе измерений ритмов головного мозга
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="video-slider__text">
+      <div class="text-item">
+        <div class="container">
+          <div class="text-padding">
+            <h2 class="video-slider__text-title">85% родителей ошибаются в способностях детей</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="video-slider__text">
+      <div class="text-item">
+        <div class="container">
+          <div class="text-padding">
+            <h2 class="video-slider__text-title">Определите природные способности по ритмам мозга</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="video-slider__text">
+      <div class="text-item">
+        <div class="container">
+          <div class="text-padding">
+            <h2 class="video-slider__text-title">Получите отчет о способностях к математике, языкам, музыке, творчеству</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="video-slider__text">
+      <div class="text-item">
+        <div class="container">
+          <div class="text-padding">
+            <h2 class="video-slider__text-title">Подарите гармонию развития и счастье самореализации</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <video loop>
+      <source src="theme/videos/20s.mp4" type="video/mp4">
+      <source src="theme/videos/20s.webm" type="video/webm">
+      <source src="theme/videos/20s.ogv" type="video/ogg"/>
+    </video>
   </div>
 
   <footer>

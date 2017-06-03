@@ -2585,6 +2585,78 @@ ul.main-menu-link-list {
 /* COLORS */
 /* PADDINGS */
 /* MARGINS */
+.video-slider {
+  width: 100%;
+  height: 37.5rem;
+  overflow: hidden;
+  position: relative; }
+  .video-slider video {
+    width: 100%; }
+
+.slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(53, 13, 6, 0.45); }
+
+.slider-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../images/Home/start_img.jpg") no-repeat;
+  background-size: cover; }
+
+.video-slider__text {
+  position: absolute;
+  left: 120%;
+  transition: left 1s ease;
+  color: #ffffff;
+  width: 100%; }
+  .video-slider__text.show {
+    left: 0; }
+  .video-slider__text .text-item {
+    text-align: center;
+    margin: auto; }
+    .video-slider__text .text-item .text-padding {
+      padding: 6.25rem; }
+
+.video-slider__text-title {
+  font-size: 2.75rem;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.video-slider__regular-text {
+  font-size: 1.75rem; }
+
+.slider-circles {
+  display: none;
+  position: absolute;
+  bottom: 2.0625rem;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle; }
+  .slider-circles .circle {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: solid 1px #ffffff;
+    border-radius: 50%;
+    margin: 0 0.625rem;
+    box-sizing: content-box; }
+    .slider-circles .circle.active {
+      border-width: 4px;
+      margin-bottom: -3px; }
+
+/* FONT */
+/* BORDER */
+/* HEADER */
+/* COLORS */
+/* PADDINGS */
+/* MARGINS */
 .page {
   padding-top: 5.5rem;
   /* -------------------------------------------- */
@@ -2665,7 +2737,8 @@ footer {
   padding: 3.125rem 0.9375rem;
   min-height: 5.5rem;
   font-size: 0.75rem;
-  font-weight: bold; }
+  font-weight: bold;
+  z-index: 8; }
   footer a {
     color: inherit;
     text-decoration: underline; }

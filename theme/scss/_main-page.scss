@@ -1,114 +1,255 @@
 @import 'variables';
 
-.video-slider {
+.choose-age {
   display: flex;
-  align-items: center;
-  width: 100%;
-  height: rem-calc(600);
-  overflow: hidden;
-  position: relative;
-
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+  justify-content: space-between;
+  padding: rem-calc(50) 0;
 }
 
-.slider-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(53, 13, 6, 0.45);
+.choose-age-text {
+  max-width: 300px;
+  font-size: rem-calc(22);
+  margin: $margin-lg $margin-md $margin-md 0;
 }
 
-.slider-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("../images/Home/start_img.jpg") no-repeat;
-  background-size: cover;
-}
-
-.video-slider__text {
-  position: absolute;
-  left: 120%;
-  margin: auto;
-  transition: left 1s ease;
-  color: $white;
-  width: 100%;
-
-
-  &.show {
-    left: 0;
-  }
-
-  .text-item {
-    text-align: center;
-    margin: auto;
-
-    .text-container {
-      margin: auto;
-      max-width: rem-calc(630);
-    }
-  }
-}
-
-.video-slider__text-title {
-  font-size: rem-calc(44);
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.video-slider__main-text {
+.choose-age-price {
   font-size: rem-calc(32);
-  font-weight: bold;
-  text-transform: uppercase;
+  margin-bottom: $margin-lg;
 }
 
-.video-slider__regular-text {
-  font-size: rem-calc(24);
-}
+.choose-age-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem-calc(124);
+  height: rem-calc(124);
+  margin: $margin-sm;
+  background-color: white;
+  border-radius: 50%;
+  border: dotted 1px $gray;
 
-.slider-circles {
-  display: none;
-  position: absolute;
-  bottom: rem-calc(33);
-  width: 100%;
-  text-align: center;
-  vertical-align: middle;
-
-  .circle {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border: solid 1px $white;
+  .choose-age-second-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem-calc(115);
+    height: rem-calc(115);
+    border: solid 5px $gray;
     border-radius: 50%;
-    margin: 0 $margin-sm;
-    box-sizing: content-box;
-
-    &.active {
-      border-width: 4px;
-      margin-bottom: -3px;
-    }
   }
 }
 
-#play-btn {
-  margin-top: rem-calc(50);
+.choose-age-icon-text {
+  max-width: rem-calc(124);
+  margin: auto;
+
+  .icon-main-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: rem-calc(14);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: $margin-xs;
+  }
+
+  .icon-age {
+    text-align: center;
+  }
+}
+
+.choose-age-item {
   cursor: pointer;
 
+  &:hover, &.active {
+    .choose-age-icon {
+      border: solid 1px $success;
+
+      .choose-age-second-border {
+        border-color: $success;
+      }
+    }
+
+    .choose-age-icon-text {
+      color: $success;
+    }
+  }
+}
+
+.age-packages {
+  background-color: $white;
+}
+
+.package-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: $margin-lg 0;
+
+  .package-section__icon {
+    margin-right: $margin-lg;
+  }
+
+  .package-section__title {
+    font-size: rem-calc(24);
+  }
+
   &:hover {
-    .play-btn-home {
-      stroke: $success;
+    .package-section__title {
+      color: $active-package-section;
+    }
+
+    svg circle {
+      fill: $active-package-section
+    }
+  }
+}
+
+.package-section-list {
+  margin: rem-calc(50) rem-calc(30) rem-calc(50) 0
+}
+
+.package-section-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: rem-calc(430);
+  background: url("../images/Home/photos/diagnostika.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+  left: -15px;
+  padding: $padding-lg rem-calc(42) $padding-lg rem-calc(66);
+
+  .section-description-title {
+    color: $light-green;
+    font-size: rem-calc(30);
+    z-index: 5;
+    margin-bottom: $margin-md;
+  }
+
+  .section-description-subtitle {
+    color: $white;
+    font-size: rem-calc(22);
+    z-index: 5;
+    margin-bottom: $margin-md;
+  }
+
+  .section-description-text {
+    color: $white;
+    font-size: rem-calc(18);
+    z-index: 5;
+  }
+}
+
+.package-section-description-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(45, 6, 6, 0.6);
+}
+
+.package-section-triangle {
+  position: absolute;
+  left: 0;
+  border: 28px solid transparent;
+  border-left: 28px solid white;
+}
+
+.how-to-work {
+  background-color: $bg-color;
+  padding: $padding-xxl $padding-lg;
+}
+
+.how-to-work-title {
+  font-size: rem-calc(32);
+  text-transform: uppercase;
+  text-align: right;
+  padding-top: $padding-md;
+  padding-right: rem-calc(50);
+}
+
+.how-to-work-step-icons {
+
+  .step-item {
+    display: inline-block;
+
+    .step-item-icon {
+      display: flex;
+      width: rem-calc(66);
+      height: rem-calc(66);
+      margin-left: rem-calc(3);
+      @include border-radius(50%);
+      border: solid 4px $gray;
+      background-color: $white;
+      margin-bottom: $margin-sm;
+
+      &.active {
+        border-color: $success;
+      }
+
+      img {
+        margin: auto;
+      }
+    }
+
+    .step-item-text {
+      font-size: rem-calc(14);
+      color: rgba(0, 0, 0, 0.5);
+      text-align: center;
     }
   }
 
+  .step-item-circle {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #d8d8d8;
+    @include border-radius(50%);
+    position: relative;
+    top: -55px;
+  }
 
 }
+
+.steps-slider {
+  background-color: $white;
+
+  .step-slider-bg-image {
+    height: rem-calc(480);
+    width: 100%;
+    background: url("../images/Home/photos/step_1.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+  }
+}
+
+.step-slider-bg-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(45, 6, 6, 0.6);
+}
+
+.button-online-entry {
+  .button-online-entry-container {
+    text-align: center;
+    padding: rem-calc(60) 0;
+  }
+}
+
+.green-bg-block {
+  background-color: $success;
+
+  .green-bg-text-container {
+    color: $white;
+    font-size: rem-calc(24);
+    font-weight: bold;
+    text-align: center;
+    max-width: rem-calc(700);
+    margin: rem-calc(60) auto;
+  }
+
+}
+

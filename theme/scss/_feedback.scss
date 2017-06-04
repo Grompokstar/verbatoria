@@ -22,3 +22,31 @@
     }
   }
 }
+
+.feedback-information {
+  text-align: center;
+
+  .feedback-title {
+    font-size: rem-calc(32);
+    margin-bottom: rem-calc(35);
+  }
+
+  .feedback-text {
+    font-size: rem-calc(20);
+    margin-bottom: rem-calc(20);
+  }
+
+  .feedback-phone {
+    margin-top: rem-calc(15);
+    font-size: rem-calc(32);
+    color: $active-package-section;
+  }
+
+  .phone-subtext {
+    font-size: rem-calc(14);
+  }
+
+  .phones {
+    margin-bottom: rem-calc(50);
+  }
+}

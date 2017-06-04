@@ -13,7 +13,7 @@ $(function(){
             i = 0,
             repeat = false;
 
-        setTimeout(function() {
+        $('#play-btn').on('click', function() {
             $('.slider-img').hide();
             $('.slider-circles').show();
             $(sliders[i]).toggleClass('show');
@@ -40,9 +40,7 @@ $(function(){
                     repeat = true;
                 }
             }, 5000);
-        }, 10000);
-
-
+        });
     });
 
 }());

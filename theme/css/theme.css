@@ -2702,7 +2702,7 @@ ul.main-menu-link-list {
 /* MARGINS */
 .choose-age {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 3.125rem 0; }
 
 .choose-age-text {
@@ -2720,16 +2720,16 @@ ul.main-menu-link-list {
   align-items: center;
   width: 7.75rem;
   height: 7.75rem;
-  margin: 0.625rem;
-  background-color: white;
+  margin: 0.3125rem;
   border-radius: 50%;
   border: dotted 1px #c1c1c1; }
   .choose-age-icon .choose-age-second-border {
     display: flex;
     justify-content: center;
+    background-color: white;
     align-items: center;
-    width: 7.1875rem;
-    height: 7.1875rem;
+    width: 7.125rem;
+    height: 7.125rem;
     border: solid 5px #c1c1c1;
     border-radius: 50%; }
 
@@ -2756,6 +2756,8 @@ ul.main-menu-link-list {
 
 .age-packages {
   background-color: #ffffff; }
+  .age-packages .row {
+    margin: 0; }
 
 .package-section {
   display: flex;
@@ -2771,33 +2773,38 @@ ul.main-menu-link-list {
   .package-section:hover svg circle {
     fill: #ec5d04; }
 
+.package-section-list-wrapper {
+  display: flex;
+  justify-content: flex-end; }
+
 .package-section-list {
-  margin: 3.125rem 1.875rem 3.125rem 0; }
+  margin: 3.125rem 10% 3.125rem 0.625rem; }
 
 .package-section-description {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   height: 26.875rem;
   background: url("../images/Home/photos/diagnostika.jpg") no-repeat center;
   background-size: cover;
   position: relative;
-  left: -15px;
-  padding: 1.25rem 2.625rem 1.25rem 4.125rem; }
+  padding: 1.25rem 2.8125rem; }
+  .package-section-description .package-section-description__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
+    max-width: 37.5rem; }
   .package-section-description .section-description-title {
     color: #85ff8a;
     font-size: 1.875rem;
-    z-index: 5;
     margin-bottom: 0.9375rem; }
   .package-section-description .section-description-subtitle {
     color: #ffffff;
     font-size: 1.375rem;
-    z-index: 5;
     margin-bottom: 0.9375rem; }
   .package-section-description .section-description-text {
     color: #ffffff;
-    font-size: 1.125rem;
-    z-index: 5; }
+    font-size: 1.125rem; }
 
 .package-section-description-overlay {
   position: absolute;
@@ -2810,8 +2817,9 @@ ul.main-menu-link-list {
 .package-section-triangle {
   position: absolute;
   left: 0;
-  border: 28px solid transparent;
-  border-left: 28px solid white; }
+  top: 11.875rem;
+  border: 1.75rem solid transparent;
+  border-left: 1.75rem solid white; }
 
 .how-to-work {
   background-color: #f5f5f5;
@@ -2888,6 +2896,37 @@ ul.main-menu-link-list {
     text-align: center;
     max-width: 43.75rem;
     margin: 3.75rem auto; }
+
+.main-page__partners {
+  background-color: #ffffff;
+  padding: 5rem; }
+  .main-page__partners .partners-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .main-page__partners .partners-title {
+    font-size: 2rem;
+    text-transform: uppercase; }
+  .main-page__partners .partner-numbers {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; }
+    .main-page__partners .partner-numbers .number-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .main-page__partners .partner-numbers .number-item .number {
+        font-size: 4rem;
+        color: #46c573; }
+      .main-page__partners .partner-numbers .number-item .partner-numbers-text {
+        text-transform: uppercase;
+        color: black;
+        font-size: 1rem; }
+    .main-page__partners .partner-numbers .number-line {
+      border-bottom: solid 1px black;
+      width: 10%; }
 
 /* FONT */
 /* BORDER */
@@ -3038,7 +3077,7 @@ footer {
   .feedback-information .phones {
     margin-bottom: 3.125rem; }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .container {
     width: 100%;
     max-width: 87.5rem; } }

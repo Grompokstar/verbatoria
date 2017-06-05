@@ -2,7 +2,7 @@
 
 .choose-age {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: rem-calc(50) 0;
 }
 
@@ -23,17 +23,17 @@
   align-items: center;
   width: rem-calc(124);
   height: rem-calc(124);
-  margin: $margin-sm;
-  background-color: white;
+  margin: $margin-xs;
   border-radius: 50%;
   border: dotted 1px $gray;
 
   .choose-age-second-border {
     display: flex;
     justify-content: center;
+    background-color: white;
     align-items: center;
-    width: rem-calc(115);
-    height: rem-calc(115);
+    width: rem-calc(114);
+    height: rem-calc(114);
     border: solid 5px $gray;
     border-radius: 50%;
   }
@@ -76,6 +76,10 @@
 
 .age-packages {
   background-color: $white;
+
+  .row {
+    margin: 0;
+  }
 }
 
 .package-section {
@@ -103,39 +107,47 @@
   }
 }
 
+.package-section-list-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .package-section-list {
-  margin: rem-calc(50) rem-calc(30) rem-calc(50) 0
+  margin: rem-calc(50) 10% rem-calc(50) $margin-sm
 }
 
 .package-section-description {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   height: rem-calc(430);
   background: url("../images/Home/photos/diagnostika.jpg") no-repeat center;
   background-size: cover;
   position: relative;
-  left: -15px;
-  padding: $padding-lg rem-calc(42) $padding-lg rem-calc(66);
+  padding: $padding-lg rem-calc(45);
+
+  .package-section-description__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
+    max-width: rem-calc(600);
+  }
 
   .section-description-title {
     color: $light-green;
     font-size: rem-calc(30);
-    z-index: 5;
     margin-bottom: $margin-md;
   }
 
   .section-description-subtitle {
     color: $white;
     font-size: rem-calc(22);
-    z-index: 5;
     margin-bottom: $margin-md;
   }
 
   .section-description-text {
     color: $white;
     font-size: rem-calc(18);
-    z-index: 5;
   }
 }
 
@@ -151,8 +163,9 @@
 .package-section-triangle {
   position: absolute;
   left: 0;
-  border: 28px solid transparent;
-  border-left: 28px solid white;
+  top: rem-calc(190);
+  border: rem-calc(28) solid transparent;
+  border-left: rem-calc(28) solid white;
 }
 
 .how-to-work {
@@ -250,6 +263,53 @@
     max-width: rem-calc(700);
     margin: rem-calc(60) auto;
   }
-
 }
+
+.main-page__partners {
+  background-color: $white;
+  padding: rem-calc(80);
+
+  .partners-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .partners-title {
+    font-size: rem-calc(32);
+    text-transform: uppercase;
+  }
+
+  .partner-numbers {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    .number-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .number {
+        font-size: rem-calc(64);
+        color: $success;
+      }
+
+      .partner-numbers-text {
+        text-transform: uppercase;
+        color: black;
+        font-size: rem-calc(16);
+      }
+    }
+
+    .number-line {
+      border-bottom: solid 1px black;
+      width: 10%;
+    }
+  }
+}
+
+
 

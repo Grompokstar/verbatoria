@@ -3038,8 +3038,9 @@ footer {
   .feedback-information .phones {
     margin-bottom: 3.125rem; }
 
-@media (min-width: 1450px) {
+@media (min-width: 1024px) {
   .container {
-    width: 1400px; } }
+    width: 100%;
+    max-width: 87.5rem; } }
 
 /*# sourceMappingURL=theme.css.map */

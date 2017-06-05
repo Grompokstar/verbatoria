@@ -1,5 +1,6 @@
-@media (min-width: 1450px) {
+@media (min-width: 1024px) {
   .container {
-    width: 1400px;
+    width: 100%;
+    max-width: rem-calc(1400);
   }
 }

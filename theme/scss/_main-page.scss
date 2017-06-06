@@ -3,7 +3,7 @@
 .choose-age {
   display: flex;
   justify-content: space-around;
-  padding: rem-calc(50) 0;
+  padding: rem-calc(50) rem-calc(20);
 }
 
 .choose-age-text {
@@ -284,29 +284,48 @@
   .partner-numbers {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
+    max-width: rem-calc(1200);
+    margin-bottom: rem-calc(70);
 
     .number-item {
       display: flex;
       flex-direction: column;
       align-items: center;
+      flex-basis: rem-calc(300);
 
       .number {
         font-size: rem-calc(64);
         color: $success;
-      }
-
-      .partner-numbers-text {
-        text-transform: uppercase;
-        color: black;
-        font-size: rem-calc(16);
       }
     }
 
     .number-line {
       border-bottom: solid 1px black;
       width: 10%;
+      position: relative;
+      top: rem-calc(45);
+    }
+  }
+
+  .partner-numbers-text {
+    text-transform: uppercase;
+    font-size: rem-calc(16);
+    text-align: center;
+  }
+
+
+  .partners-logo {
+    display: flex;
+
+    .logo-item {
+      height: rem-calc(80);
+      margin: $margin-sm $margin-xxl;
+
+      img {
+        height: 100%;
+      }
     }
   }
 }

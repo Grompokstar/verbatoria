@@ -2899,7 +2899,9 @@ ul.main-menu-link-list {
 
 .main-page__partners {
   background-color: #ffffff;
-  padding: 5rem; }
+  padding: 5rem;
+  background: url("../images/Home/bg_city.jpg") no-repeat center;
+  background-size: cover; }
   .main-page__partners .partners-container {
     display: flex;
     flex-direction: column;

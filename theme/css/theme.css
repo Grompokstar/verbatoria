@@ -2907,7 +2907,8 @@ ul.main-menu-link-list {
     align-items: center; }
   .main-page__partners .partners-title {
     font-size: 2rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 2.5rem; }
   .main-page__partners .partner-numbers {
     display: flex;
     justify-content: space-around;

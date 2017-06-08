@@ -3,14 +3,11 @@
 html,
 body {
   font-size: 16px;
+  background-color: $bg-color;
 
   * {
     outline: none !important;
   }
-}
-
-body {
-  background-color: $bg-color;
 }
 
 .hide {
@@ -71,10 +68,6 @@ button[type="submit"] {
   }
 }
 
-.container {
-  max-width: rem-calc(1500) !important;
-}
-
 .round-button {
   @include border-radius(18px);
   font-size: rem-calc(14);
@@ -113,3 +106,32 @@ button[type="submit"] {
     padding: 0 rem-calc(120);
   }
 }
+
+.green-xxl-text {
+  color: $success;
+  font-size: rem-calc(64);
+}
+
+/*.mb-1 {
+  margin-bottom: rem-calc(10) !important;
+}
+
+.mb-2 {
+  margin-bottom: rem-calc(20) !important;
+}
+
+.mb-3 {
+  margin-bottom: rem-calc(30) !important;
+}
+
+.mb-4 {
+  margin-bottom: rem-calc(40) !important;
+}
+
+.mb-5 {
+  margin-bottom: rem-calc(50) !important;
+}
+
+.mb-6 {
+  margin-bottom: rem-calc(60) !important;
+}*/

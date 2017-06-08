@@ -38,3 +38,41 @@ $margin-lg: rem-calc(20);
 $margin-xlg: rem-calc(25);
 $margin-xl: rem-calc(30);
 $margin-xxl: rem-calc(35);
+
+$spacer-x: 10px;
+$spacer-y: 10px;
+
+$spacers: (
+        0: (
+                x: 0,
+                y: 0
+        ),
+        1: (
+                x: $spacer-x,
+                y: $spacer-y
+        ),
+        2: (
+                x: ($spacer-x * 2),
+                y: ($spacer-y * 2)
+        ),
+        3: (
+                x: ($spacer-x * 3),
+                y: ($spacer-y * 3)
+        ),
+        35: (
+                x: ($spacer-x * 3.5),
+                y: ($spacer-y * 3.5)
+        ),
+        4: (
+                x: ($spacer-x * 4),
+                y: ($spacer-y * 4)
+        ),
+        5: (
+                x: ($spacer-x * 5),
+                y: ($spacer-y * 5)
+        ),
+        6: (
+                x: ($spacer-x * 6),
+                y: ($spacer-y * 6)
+        )
+);

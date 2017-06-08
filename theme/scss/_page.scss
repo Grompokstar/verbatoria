@@ -2,6 +2,7 @@
 
 .page {
   padding-top: $header-height;
+  font-size: rem-calc(18);
 
   /* -------------------------------------------- */
   /* PAGE TITLE */
@@ -50,12 +51,19 @@
   }
 
   .page-block__results {
+    position: relative;
     background-color: $bg-color;
+    height: rem-calc(432);
+
     .page-list {
       padding: {
         top: $padding-xlg;
         bottom: $padding-xxl;
       }
+    }
+
+    .results-text {
+      max-width: rem-calc(445);
     }
   }
 
@@ -67,6 +75,23 @@
     img {
       height: 100%
     }
+  }
+
+  .page-block-no-bg {
+    padding: {
+      top: rem-calc(40);
+      bottom: rem-calc(70);
+    };
+  }
+
+  .page-block__title {
+    font-size: rem-calc(32);
+    margin-bottom: rem-calc(60);
+    text-align: center;
+  }
+
+  .economic-item {
+    text-align: center;
   }
 
   /* -------------------------------------------- */
@@ -116,5 +141,21 @@
     height: 14px;
     margin-right: rem-calc(20);
     background: url("../images/Partners/green_bullet.svg") center no-repeat;
+  }
+
+  .half-screen-img {
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    background: url("../images/Partners/photos/kindergarten.png") center no-repeat;
+    background-size: cover;
+    
+    &.psychologist {
+      background-image: url("../images/Partners/photos/psychologist.jpg");
+    }
+
+    &.hr {
+      background-image: url("../images/Partners/photos/hr.jpg");
+    }
   }
 }

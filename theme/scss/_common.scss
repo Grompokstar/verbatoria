@@ -82,6 +82,21 @@ button[type="submit"] {
     color: $white;
     background-color: $success;
 
+    &.reverse {
+      background-color: $white;
+      color: $success;
+
+      &:hover {
+        background-color: $success;
+        color: $white;
+      }
+
+      &:active {
+        background-color: $success-light !important;
+        color: $white !important;
+      }
+    }
+
     &:hover {
       color: $success;
       background-color: $white;
@@ -111,27 +126,3 @@ button[type="submit"] {
   color: $success;
   font-size: rem-calc(64);
 }
-
-/*.mb-1 {
-  margin-bottom: rem-calc(10) !important;
-}
-
-.mb-2 {
-  margin-bottom: rem-calc(20) !important;
-}
-
-.mb-3 {
-  margin-bottom: rem-calc(30) !important;
-}
-
-.mb-4 {
-  margin-bottom: rem-calc(40) !important;
-}
-
-.mb-5 {
-  margin-bottom: rem-calc(50) !important;
-}
-
-.mb-6 {
-  margin-bottom: rem-calc(60) !important;
-}*/

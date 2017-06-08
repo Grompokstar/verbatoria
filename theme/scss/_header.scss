@@ -44,6 +44,16 @@ header {
       text-decoration: none;
       border-bottom: solid 2px $success;
     }
+
+    &:active {
+      text-decoration: none;
+      border-bottom: solid 2px $success;
+    }
+
+    &:visited {
+      text-decoration: none;
+      border-bottom: solid 2px $success;
+    }
   }
 }
 

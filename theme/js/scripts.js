@@ -57,7 +57,35 @@ $(function(){
             }, 5000);
         });
 
+        var packageScheme = {
+            "4-7": [1, 2, 3, 12],
+            "7-11": [1, 5, 2, 3, 6],
+            "11-14": [1, 7, 2, 3, 8],
+            "14-17": [1, 9, 4, 3],
+            "17": [11, 10, 3]
+        };
+
+        var currentPackage = $('.choose-age-item.active').attr('data-package');
         var $packageSections = $('.package-section');
+        var $ageItems = $('.choose-age-item');
+
+        packageScheme[currentPackage].forEach(function(id) {
+            $('.package-section[data-id="' + id + '"]').addClass('show-section');
+        });
+
+        $ageItems.on('click', function() {
+            $ageItems.removeClass('active');
+            $(this).addClass('active');
+
+            currentPackage = $(this).attr('data-package');
+            $packageSections.removeClass('show-section');
+
+            packageScheme[currentPackage].forEach(function(id) {
+                $('.package-section[data-id="' + id + '"]').addClass('show-section');
+            });
+        });
+
+
 
         $packageSections.on('mouseenter', function(e) {
             $packageSections.removeClass('current');

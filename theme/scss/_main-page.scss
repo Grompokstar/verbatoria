@@ -43,7 +43,7 @@
   max-width: rem-calc(124);
   margin: auto;
 
-  .icon-main-text {
+  .main-text {
     font-family: 'Oswald', sans-serif;
     font-size: rem-calc(14);
     text-transform: uppercase;
@@ -51,7 +51,7 @@
     margin-bottom: $margin-xs;
   }
 
-  .icon-age {
+  .age {
     text-align: center;
   }
 }
@@ -83,36 +83,31 @@
 }
 
 .package-section {
-  display: flex;
+  display: none;
   align-items: center;
   cursor: pointer;
   margin: $margin-lg 0;
+
+  &.show-section {
+    display: flex;
+  }
 
   .package-section__icon {
     margin-right: $margin-lg;
   }
 
   .package-section__title {
+    display: inline-block;
     font-size: rem-calc(24);
   }
-
-  /*&:hover {
-    .package-section__title {
-      color: $active-package-section;
-    }
-
-    svg circle {
-      fill: $active-package-section
-    }
-  }*/
 
   &.current {
     .package-section__title {
       color: $active-package-section;
     }
 
-    svg circle {
-      fill: $active-package-section
+    .circle-wrapper {
+      background-color: $active-package-section
     }
   }
 }
@@ -123,7 +118,8 @@
 }
 
 .package-section-list {
-  margin: rem-calc(50) 10% rem-calc(50) $margin-sm
+  margin: rem-calc(50) 7% rem-calc(50) $margin-sm;
+  width: rem-calc(430);
 }
 
 .package-section-description {

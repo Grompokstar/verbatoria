@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(../fonts/Lato/stylesheet.css);
 @import url(../fonts/Oswald/stylesheet.css);
+@import url(../fonts/icomoon/styles.css);
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -3243,14 +3244,23 @@ ul.main-menu-link-list {
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin: 1.25rem 0; }
+  margin: 1.25rem 0;
+  /*&:hover {
+    .package-section__title {
+      color: $active-package-section;
+    }
+
+    svg circle {
+      fill: $active-package-section
+    }
+  }*/ }
   .package-section .package-section__icon {
     margin-right: 1.25rem; }
   .package-section .package-section__title {
     font-size: 1.5rem; }
-  .package-section:hover .package-section__title {
+  .package-section.current .package-section__title {
     color: #ec5d04; }
-  .package-section:hover svg circle {
+  .package-section.current svg circle {
     fill: #ec5d04; }
 
 .package-section-list-wrapper {
@@ -3262,18 +3272,20 @@ ul.main-menu-link-list {
 
 .package-section-description {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   height: 26.875rem;
   background: url("../images/Home/photos/diagnostika.jpg") no-repeat center;
   background-size: cover;
   position: relative;
-  padding: 1.25rem 2.8125rem; }
+  padding: 1.25rem 4.125rem; }
   .package-section-description .package-section-description__text-container {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     z-index: 5;
-    max-width: 37.5rem; }
+    max-width: 28.125rem;
+    display: none; }
+    .package-section-description .package-section-description__text-container.current {
+      display: flex; }
   .package-section-description .section-description-title {
     color: #85ff8a;
     font-size: 1.875rem;

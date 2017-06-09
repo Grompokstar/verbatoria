@@ -96,7 +96,17 @@
     font-size: rem-calc(24);
   }
 
-  &:hover {
+  /*&:hover {
+    .package-section__title {
+      color: $active-package-section;
+    }
+
+    svg circle {
+      fill: $active-package-section
+    }
+  }*/
+
+  &.current {
     .package-section__title {
       color: $active-package-section;
     }
@@ -118,19 +128,23 @@
 
 .package-section-description {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   height: rem-calc(430);
   background: url("../images/Home/photos/diagnostika.jpg") no-repeat center;
   background-size: cover;
   position: relative;
-  padding: $padding-lg rem-calc(45);
+  padding: $padding-lg rem-calc(66);
 
   .package-section-description__text-container {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     z-index: 5;
-    max-width: rem-calc(600);
+    max-width: rem-calc(450);
+    display: none;
+
+    &.current {
+      display: flex;
+    }
   }
 
   .section-description-title {

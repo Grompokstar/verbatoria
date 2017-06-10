@@ -3259,7 +3259,8 @@ ul.main-menu-link-list {
   display: none;
   align-items: center;
   cursor: pointer;
-  margin: 1.25rem 0; }
+  margin-bottom: 1.25rem;
+  order: 0; }
   .package-section.show-section {
     display: flex; }
   .package-section .package-section__icon {
@@ -3277,7 +3278,9 @@ ul.main-menu-link-list {
   justify-content: flex-end; }
 
 .package-section-list {
-  margin: 3.125rem 7% 3.125rem 0.625rem;
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem 7% 2.5rem 0.625rem;
   width: 26.875rem; }
 
 .package-section-description {

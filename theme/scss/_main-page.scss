@@ -86,7 +86,9 @@
   display: none;
   align-items: center;
   cursor: pointer;
-  margin: $margin-lg 0;
+  margin-bottom: $margin-lg;
+  order: 0;
+
 
   &.show-section {
     display: flex;
@@ -118,7 +120,9 @@
 }
 
 .package-section-list {
-  margin: rem-calc(50) 7% rem-calc(50) $margin-sm;
+  display: flex;
+  flex-direction: column;
+  margin: rem-calc(40) 7% rem-calc(40) $margin-sm;
   width: rem-calc(430);
 }
 

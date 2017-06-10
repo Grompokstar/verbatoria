@@ -70,18 +70,28 @@ $(function(){
         var $ageItems = $('.choose-age-item');
 
         packageScheme[currentPackage].forEach(function(id) {
-            $('.package-section[data-id="' + id + '"]').addClass('show-section');
+            $('.package-section[data-id="' + id + '"]').addClass('show-section').css('order', i);
         });
 
         $ageItems.on('click', function() {
             $ageItems.removeClass('active');
             $(this).addClass('active');
+            $packageSections.removeClass('current');
 
             currentPackage = $(this).attr('data-package');
             $packageSections.removeClass('show-section');
 
-            packageScheme[currentPackage].forEach(function(id) {
-                $('.package-section[data-id="' + id + '"]').addClass('show-section');
+            packageScheme[currentPackage].forEach(function(id, i) {
+                var $currentSection = $('.package-section[data-id="' + id + '"]');
+                var sectionId = $currentSection.attr('data-id');
+
+                if (i === 0) {
+                    $currentSection.addClass('current');
+                    $('.package-section-description__text-container').removeClass('current');
+                    $('.package-section-description__text-container[data-id="' + sectionId + '"]').addClass('current');
+                }
+
+                $currentSection.addClass('show-section').css('order', i);
             });
         });
 

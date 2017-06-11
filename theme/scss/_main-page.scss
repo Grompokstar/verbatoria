@@ -25,7 +25,7 @@
   height: rem-calc(124);
   margin: $margin-xs;
   border-radius: 50%;
-  border: dotted 1px $gray;
+  border: dotted 1px rgba(0, 0, 0, 0.1);
 
   .choose-age-second-border {
     display: flex;
@@ -34,7 +34,7 @@
     align-items: center;
     width: rem-calc(114);
     height: rem-calc(114);
-    border: solid 5px $gray;
+    border: solid 5px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
   }
 }
@@ -60,6 +60,16 @@
   cursor: pointer;
 
   &:hover, &.active {
+    .choose-age-icon {
+      border: solid 1px rgba(0, 0, 0, 0.2);
+
+      .choose-age-second-border {
+        border-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  &.active {
     .choose-age-icon {
       border: solid 1px $success;
 
@@ -130,7 +140,7 @@
   display: flex;
   justify-content: flex-start;
   height: rem-calc(430);
-  background: url("../images/Home/photos/diagnostika.jpg") no-repeat center;
+  background: url("../images/Home/bullets_bg/1.jpg") no-repeat center;
   background-size: cover;
   position: relative;
   padding: $padding-lg rem-calc(66);

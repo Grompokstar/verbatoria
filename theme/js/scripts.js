@@ -68,6 +68,9 @@ $(function(){
         var currentPackage = $('.choose-age-item.active').attr('data-package');
         var $packageSections = $('.package-section');
         var $ageItems = $('.choose-age-item');
+        var sectionBackground = $('.package-section-description');
+        var backgrounds = ['2_4-7', '2_7-11', '2_11-14', '3_4-7', '3_7-11', '3_11-14', '3_14-17', '3_17', '4_14-17',
+            '5_7-11', '6_7-11', '7_11-14', '8_11-14', '9_14-17', '10_14-17', '10_17', '11_17', '12_4-7'];
 
         packageScheme[currentPackage].forEach(function(id) {
             $('.package-section[data-id="' + id + '"]').addClass('show-section').css('order', i);
@@ -84,11 +87,16 @@ $(function(){
             packageScheme[currentPackage].forEach(function(id, i) {
                 var $currentSection = $('.package-section[data-id="' + id + '"]');
                 var sectionId = $currentSection.attr('data-id');
+                var sectionBgIndex = sectionId;
+                if (backgrounds.indexOf(sectionId + '_' + currentPackage) !== -1) {
+                    sectionBgIndex += '_' + currentPackage;
+                }
 
                 if (i === 0) {
                     $currentSection.addClass('current');
                     $('.package-section-description__text-container').removeClass('current');
                     $('.package-section-description__text-container[data-id="' + sectionId + '"]').addClass('current');
+                    sectionBackground.css('background-image', 'url("theme/images/Home/bullets_bg/' + sectionBgIndex + '.jpg")');
                 }
 
                 $currentSection.addClass('show-section').css('order', i);
@@ -96,12 +104,17 @@ $(function(){
         });
 
 
-
         $packageSections.on('mouseenter', function(e) {
             $packageSections.removeClass('current');
             $(this).addClass('current');
 
             var sectionId = $(this).attr('data-id');
+            var sectionBgIndex = sectionId;
+            if (backgrounds.indexOf(sectionId + '_' + currentPackage) !== -1) {
+                sectionBgIndex += '_' + currentPackage;
+            }
+
+            sectionBackground.css('background-image', 'url("theme/images/Home/bullets_bg/' + sectionBgIndex + '.jpg")');
 
             $('.package-section-description__text-container').removeClass('current');
             $('.package-section-description__text-container[data-id="' + sectionId + '"]').addClass('current');

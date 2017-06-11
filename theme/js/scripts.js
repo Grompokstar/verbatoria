@@ -118,7 +118,56 @@ $(function(){
 
             $('.package-section-description__text-container').removeClass('current');
             $('.package-section-description__text-container[data-id="' + sectionId + '"]').addClass('current');
-        })
+        });
+
+        //Шаги "Как мы работаем"
+
+
+        var currentStepId;
+        var stepIcons = $('.step-item-icon');
+        var clickedStepId;
+
+
+        stepIcons.on('click', function() {
+            currentStepId = $('.step-item-icon.active').attr('data-step');
+            clickedStepId = $(this).attr('data-step');
+            $('#clock-oval').addClass('go-time');
+
+            if (clickedStepId != currentStepId) {
+                stepIcons.removeClass('active');
+                $(this).addClass('active');
+                $('.step').removeClass('current');
+                $('#step-' + clickedStepId).addClass('current');
+            }
+
+
+
+        });
+
+        $('.slider-btn.left').on('click', function() {
+            currentStepId = $('.step.current').attr('data-step');
+
+            if (currentStepId > 1) {
+                $('#step-' + currentStepId).removeClass('current');
+                $('#step-' + (Number(currentStepId) - 1)).addClass('current');
+
+                stepIcons.removeClass('active');
+                $('.step-item-icon[data-step="' + (Number(currentStepId) - 1) +  '"]').addClass('active');
+            }
+        });
+
+
+        $('.slider-btn.right').on('click', function() {
+            currentStepId = $('.step.current').attr('data-step');
+
+            if (currentStepId < 3) {
+                $('#step-' + currentStepId).removeClass('current');
+                $('#step-' + (Number(currentStepId) + 1)).addClass('current');
+
+                stepIcons.removeClass('active');
+                $('.step-item-icon[data-step="' + (Number(currentStepId) + 1) +  '"]').addClass('active');
+            }
+        });
 
 
     });

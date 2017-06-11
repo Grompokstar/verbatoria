@@ -9,7 +9,7 @@
 .choose-age-text {
   max-width: 300px;
   font-size: rem-calc(22);
-  margin: $margin-lg $margin-md $margin-md 0;
+  margin: $margin-sm $margin-md $margin-md 0;
 }
 
 .choose-age-price {
@@ -191,83 +191,6 @@
   border: rem-calc(28) solid transparent;
   border-left: rem-calc(28) solid white;
 
-}
-
-.how-to-work {
-  background-color: $bg-color;
-  padding: $padding-xxl $padding-lg;
-}
-
-.how-to-work-title {
-  font-size: rem-calc(32);
-  text-transform: uppercase;
-  text-align: right;
-  padding-top: $padding-md;
-  padding-right: rem-calc(50);
-}
-
-.how-to-work-step-icons {
-
-  .step-item {
-    display: inline-block;
-
-    .step-item-icon {
-      display: flex;
-      width: rem-calc(66);
-      height: rem-calc(66);
-      margin-left: rem-calc(3);
-      @include border-radius(50%);
-      border: solid 4px $gray;
-      background-color: $white;
-      margin-bottom: $margin-sm;
-
-      &.active {
-        border-color: $success;
-      }
-
-      img {
-        margin: auto;
-      }
-    }
-
-    .step-item-text {
-      font-size: rem-calc(14);
-      color: rgba(0, 0, 0, 0.5);
-      text-align: center;
-    }
-  }
-
-  .step-item-circle {
-    display: inline-block;
-    width: 5px;
-    height: 5px;
-    background-color: #d8d8d8;
-    @include border-radius(50%);
-    position: relative;
-    top: -55px;
-  }
-
-}
-
-.steps-slider {
-  background-color: $white;
-
-  .step-slider-bg-image {
-    height: rem-calc(480);
-    width: 100%;
-    background: url("../images/Home/photos/step_1.jpg") no-repeat center;
-    background-size: cover;
-    position: relative;
-  }
-}
-
-.step-slider-bg-image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(45, 6, 6, 0.6);
 }
 
 .button-online-entry {

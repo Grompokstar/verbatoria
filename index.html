@@ -572,7 +572,7 @@
         <div class="col-xs-12 col-md-6">
           <div class="how-to-work-step-icons">
             <div class="step-item">
-              <div class="step-item-icon active">
+              <div class="step-item-icon active" data-step="1">
                 <img src="theme/images/Home/how_measure.svg" alt="how_measure">
               </div>
               <div class="step-item-text">
@@ -583,7 +583,7 @@
             <div class="step-item-circle"></div>
             <div class="step-item-circle"></div>
             <div class="step-item">
-              <div class="step-item-icon">
+              <div class="step-item-icon" data-step="2">
                 <img src="theme/images/Home/how_process.svg" alt="how_process">
               </div>
               <div class="step-item-text">
@@ -594,7 +594,7 @@
             <div class="step-item-circle"></div>
             <div class="step-item-circle"></div>
             <div class="step-item">
-              <div class="step-item-icon">
+              <div class="step-item-icon" data-step="3">
                 <img src="theme/images/Home/how_report.svg" alt="how_report">
               </div>
               <div class="step-item-text">
@@ -608,9 +608,91 @@
   </div>
 
   <div class="steps-slider">
-      <div class="step-slider-bg-image">
-        <div class="step-slider-bg-image-overlay"></div>
+    <div class="slider-btn left"></div>
+    <div class="slider-btn right"></div>
+
+    <div id="step-1" class="step current" data-step="1">
+      <div class="step-1-overlay"></div>
+      <div class="step-content-container">
+        <div class="left-block">
+          <div class="step-title mb-3">
+            Измерение
+          </div>
+          <div class="step-text">
+            Измерение осуществляется с помощью ультра-легкого безопасного датчика NeuroSky (США), прикрепленного на голове
+          </div>
+        </div>
+        <div class="right-block">
+          <div class="clock">
+            <div class="clock-svg">
+              <svg width="202px" height="204px" viewBox="0 0 202 204" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+                <title>30 min circle</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="СARD-S1" transform="translate(-557.000000, -139.000000)">
+                    <g id="Group-21">
+                      <g id="30-min-circle" transform="translate(556.000000, 140.000000)">
+                        <circle id="Oval-6" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="3" cx="101" cy="101" r="99"></circle>
+                        <circle id="clock-oval" stroke="#85FF8A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dashoffset="309" stroke-dasharray="310 1000" transform="translate(101.000000, 101.000000) rotate(-1.000000) translate(-101.000000, -101.000000) " cx="101" cy="101" r="99"></circle>
+                        <path d="M102,11 L102,27" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M190,100 L174,100" id="Line-Copy-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M26,100 L10,100" id="Line-Copy-4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M102,175 L102,191" id="Line-Copy-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <span class="clock-time">30</span>
+            <span class="clock-text">минут</span>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <div id="step-2" class="step" data-step="2">
+      <div class="step-2-overlay"></div>
+      <div class="step-content-container">
+        <div class="left-block">
+          <div class="step-title mb-3">
+            Обработка данных
+          </div>
+          <div class="step-text">
+            Сигнал расшифровывается автоматически на основе актуальных научных знаний, субъективные оценки исключены.
+          </div>
+        </div>
+        <div class="right-block">
+          <div>
+            <div>В итоге ребенку присваивается один из</div>
+            <div class="right-block-second-line">
+              <div class="step-2-count">67</div>
+              <div><span class="right-block-title">Миллионов</span><br/>вариантов профилей</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="step-3" class="step" data-step="3">
+      <div class="step-3-overlay"></div>
+      <div class="step-content-container">
+        <div class="left-block">
+          <div class="step-title mb-1">
+            Отчет
+          </div>
+          <div class="step-text">
+            <p>В отчете мы доступно, наглядно и подробно описываем долгосрочный план развития личности. </p>
+            <p>Также предоставляем возможность обращаться к нашим специалистам с любыми вопросами в течение года.</p>
+          </div>
+        </div>
+        <div class="right-block">
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="button-online-entry">

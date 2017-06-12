@@ -1,7 +1,13 @@
 $(function(){
 
     $(window).ready(function(){
-        var $mainMenu = $('.main-menu');
+
+        //header
+        var $mainMenu = $('.main-menu'),
+            $cityBtn = $('#city-btn'),
+            $cityBtnIcon = $('#city-btn .fa'),
+            $cityMenu = $('#city-menu'),
+            $dropdownItems = $('.dropdown li');
 
         $('.main-menu-btn').on('click', function () {
             $mainMenu.toggleClass('visible');
@@ -21,6 +27,18 @@ $(function(){
                     $('.overlay').toggleClass('visible');
                 }
             }
+        });
+
+        $cityBtn.on('click', function() {
+            $(this).closest('.dropdown').toggleClass('city-bg');
+            $('#city-btn .fa').toggleClass('fa-angle-down').toggleClass('fa-angle-up')
+            $cityMenu.toggleClass('show');
+        });
+
+        $dropdownItems.on('click', function() {
+            $cityMenu.toggleClass('show');
+            var city = $(this).find('a').html();
+            $cityBtn.html(city + '<span class="fa fa-angle-down">');
         });
 
 

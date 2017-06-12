@@ -3019,6 +3019,30 @@ header {
   .language-btn:active {
     background-color: #f5f5f5; }
 
+.dropdown {
+  position: relative; }
+  .dropdown a[data-toggle="dropdown"] {
+    color: #c1c1c1; }
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 0.3125rem;
+  left: 0;
+  padding: 0.625rem 0;
+  background-color: #ffffff;
+  list-style-type: none;
+  width: 8.75rem; }
+  .dropdown-menu li {
+    padding: 0.3125rem 0.75rem; }
+    .dropdown-menu li:hover {
+      background-color: #f5f5f5; }
+  .dropdown-menu a {
+    color: black;
+    text-decoration: none; }
+  .dropdown-menu.show {
+    display: block; }
+
 /* FONT */
 /* BORDER */
 /* HEADER */

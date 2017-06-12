@@ -104,11 +104,12 @@
 
 #play-btn {
   margin-top: rem-calc(50);
-  cursor: pointer;
+}
 
-  &:hover {
-    .play-btn-home {
-      stroke: $success;
-    }
+#play-btn-circle {
+  transition: stroke-dashoffset 11s ease;
+
+  &.go-time {
+    stroke-dashoffset: 0
   }
 }

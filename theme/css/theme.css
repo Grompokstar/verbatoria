@@ -3187,10 +3187,12 @@ ul.main-menu-link-list {
       margin-bottom: -3px; }
 
 #play-btn {
-  margin-top: 3.125rem;
-  cursor: pointer; }
-  #play-btn:hover .play-btn-home {
-    stroke: #46c573; }
+  margin-top: 3.125rem; }
+
+#play-btn-circle {
+  transition: stroke-dashoffset 11s ease; }
+  #play-btn-circle.go-time {
+    stroke-dashoffset: 0; }
 
 /* FONT */
 /* BORDER */

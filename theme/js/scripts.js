@@ -23,12 +23,18 @@ $(function(){
             }
         });
 
+
+
+        //video-slider
+
         var sliders = $('.video-slider__text'),
             sliderCircles = $('.slider-circles .circle'),
             i = 0,
             repeat = false;
 
-        $('#play-btn').on('click', function() {
+        $('#play-btn-circle').addClass('go-time');
+
+        setTimeout(function() {
             $('.slider-img').hide();
             $('.slider-circles').show();
             $(sliders[i]).toggleClass('show');
@@ -55,7 +61,7 @@ $(function(){
                     repeat = true;
                 }
             }, 5000);
-        });
+        }, 10000);
 
         var packageScheme = {
             "4-7": [1, 2, 3, 12],
@@ -75,6 +81,10 @@ $(function(){
         packageScheme[currentPackage].forEach(function(id) {
             $('.package-section[data-id="' + id + '"]').addClass('show-section').css('order', i);
         });
+
+
+
+        // Пакеты исследований
 
         $ageItems.on('click', function() {
             $ageItems.removeClass('active');

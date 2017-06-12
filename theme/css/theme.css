@@ -2942,8 +2942,7 @@ header {
   position: fixed;
   z-index: 10;
   top: 0;
-  right: 0;
-  left: 0;
+  width: 100%;
   background-color: #ffffff; }
   header .container {
     position: relative; }
@@ -4153,6 +4152,9 @@ footer {
     width: 100%;
     max-width: 81.25rem; } }
 @media (max-width: 991px) {
+  .container {
+    width: 100%; }
+
   .main-menu-btn {
     border: none; }
     .main-menu-btn:hover {
@@ -4171,6 +4173,21 @@ footer {
         color: #46c573; }
       .main-menu-btn.close:active {
         color: #46c573;
-        background-color: #ffffff; } }
+        background-color: #ffffff; }
+
+  .choose-age {
+    flex-wrap: wrap;
+    padding-top: 1.25rem; }
+    .choose-age .first-block {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.25rem; }
+      .choose-age .first-block .choose-age-text {
+        max-width: 100%; }
+
+  .main-page__partners {
+    padding: 0; } }
 
 /*# sourceMappingURL=theme.css.map */

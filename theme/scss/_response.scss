@@ -8,6 +8,10 @@
 }
 
 @media (max-width: 991px) {
+
+  .container {
+    width: 100%;
+  }
   .main-menu-btn {
     border: none;
 
@@ -41,5 +45,25 @@
         background-color: $white;
       }
     }
+  }
+  .choose-age {
+    flex-wrap: wrap;
+    padding-top: rem-calc(20);
+
+    .first-block {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: rem-calc(20);
+
+      .choose-age-text {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .main-page__partners {
+    padding: 0;
   }
 }

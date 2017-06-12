@@ -3442,6 +3442,8 @@ ul.main-menu-link-list {
   border-radius: 50%;
   position: relative;
   top: -55px; }
+  .how-to-work-step-icons .step-item-circle.active {
+    background-color: #46c573; }
 
 .steps-slider {
   color: #ffffff;
@@ -3506,7 +3508,7 @@ ul.main-menu-link-list {
     display: flex;
     max-width: 1200px;
     margin: auto;
-    z-index: 10;
+    z-index: 5;
     height: 100%;
     position: relative; }
     .steps-slider .step-content-container > div {
@@ -3578,9 +3580,28 @@ ul.main-menu-link-list {
     height: 100%; }
 
 #clock-oval {
-  transition: stroke-dashoffset 5s linear; }
+  transition: stroke-dashoffset 5s ease; }
   #clock-oval.go-time {
     stroke-dashoffset: 0; }
+
+.diagram-bg {
+  width: 9.375rem;
+  height: 9.25rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0.3125rem;
+  transition: all 1s ease; }
+  .diagram-bg.animate {
+    transform: scale(2); }
+
+.diagram {
+  width: 100%;
+  height: 100%;
+  background: url("../images/Home/Diagram@2x.png") no-repeat center;
+  background-size: cover; }
 
 /* FONT */
 /* BORDER */

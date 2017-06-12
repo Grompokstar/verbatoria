@@ -128,16 +128,38 @@ $(function(){
             clickedStepId,
             $spincrement = $(".spincrement"),
             $clockOval = $('#clock-oval'),
-            step2Timer, step3Timer;
+            step2Timer, step3Timer,
+            stepCircles = $('.step-item-circle');
 
         function startStepsAnimation() {
+            var circleCount = 0,
+                timerStep2;
             stepIcons.get(0).click();
-            step2Timer =setTimeout(function() {
+            var timerStep1 = setInterval(function() {
+                $(stepCircles.get(circleCount)).addClass('active');
+                if (circleCount <= 2) {
+                    circleCount++;
+                }
+            }, 1500);
+
+            step2Timer = setTimeout(function() {
+                clearInterval(timerStep1);
+                stepCircles.removeClass('active');
                 stepIcons.get(1).click();
+
+                timerStep2 = setInterval(function() {
+                    $(stepCircles.get(circleCount)).addClass('active');
+                    if (circleCount <= 5) {
+                        circleCount++;
+                    }
+                }, 1500);
             }, 6000);
 
             step3Timer = setTimeout(function() {
+                clearInterval(timerStep2);
+                stepCircles.removeClass('active');
                 stepIcons.get(2).click();
+                $('.diagram-bg').addClass('animate');
             }, 12000);
         }
 

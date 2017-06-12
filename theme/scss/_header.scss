@@ -13,6 +13,22 @@ header {
   }
 }
 
+.header-overlay {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(256, 256, 256, 0.9);
+  z-index: 3;
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+
 .header-flex-container {
   display: flex;
   justify-content: space-between;
@@ -39,6 +55,7 @@ header {
     text-transform: uppercase;
     font-size: rem-calc(14);
     font-weight: bold;
+    padding-bottom: rem-calc(8);
 
     &:hover {
       text-decoration: none;
@@ -83,15 +100,68 @@ header {
   top: 1px;
   top: rem-calc(25);
   right: rem-calc(75);
+  z-index: 5;
+}
+
+.language-list {
+  position: absolute;
+  top: -18px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  background-color: white;
+  @include border-radius(36px);
+  height: rem-calc(36);
+  padding: 0 rem-calc(20);
+  transition: width 1s ease;
+  width: 0;
+
+  &.open {
+    width: rem-calc(420);
+    border: solid 1px $success;
+
+    li {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  li {
+    padding: 0 rem-calc(25);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: rem-calc(14);
+    cursor: pointer;
+    visibility: hidden;
+    transition: opacity 2s ease;
+    opacity: 0;
+
+    &:hover {
+      text-decoration: underline;
+
+      &.current {
+        text-decoration: none;
+      }
+    }
+
+    &.current {
+      color: $success
+    }
+  }
 }
 
 .language-btn {
+  position: relative;
   border: rem-calc(1) solid $gray;
   height: rem-calc(36);
   width: rem-calc(36);
   color: $gray;
   background-color: $white;
   text-transform: uppercase;
+  z-index: 10;
+  font-size: rem-calc(14);
+  font-weight: bold;
 
   &.circle {
     @include border-radius(50%)

@@ -48,7 +48,12 @@
 .orange-line {
   width: 64px;
   margin: auto;
-  border-top: solid 4px $active-package-section;
+  border-top: solid 3px $active-package-section;
+
+  &.left {
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
 
 .page__partner-cards {

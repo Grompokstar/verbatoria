@@ -1,0 +1,42 @@
+@import "variables";
+
+.article {
+  font-size: rem-calc(16);
+
+  >img {
+    margin: rem-calc(40) 0;
+  }
+}
+
+.article-title {
+  font-size: rem-calc(36);
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.next-article-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: rem-calc(18);
+  font-weight: bold;
+  margin: rem-calc(60) 0;
+
+  a {
+    color: inherit;
+  }
+
+  .fa {
+    font-weight: normal;
+  }
+
+  .fa-long-arrow-left {
+    padding-right: rem-calc(10);
+  }
+
+  .fa-long-arrow-right {
+    padding-left: rem-calc(10);
+  }
+}

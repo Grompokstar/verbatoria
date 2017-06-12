@@ -4,16 +4,19 @@ $(function(){
 
         //header
         var $mainMenu = $('.main-menu'),
+            $mobileMainMenu = $('.mobile-main-menu'),
             $cityBtn = $('#city-btn'),
             $cityBtnIcon = $('#city-btn .fa'),
             $cityMenu = $('#city-menu'),
             $dropdownItems = $('.dropdown li'),
             $languageBtn = $('.language-btn'),
             $languageList = $('.language-list'),
-            $headerOverlay = $('.header-overlay');
+            $headerOverlay = $('.header-overlay'),
+            $clickToToggleSubmenu = $('.click-to-toggle');
 
         $('.main-menu-btn').on('click', function () {
             $mainMenu.toggleClass('visible');
+            $mobileMainMenu.toggleClass('visible');
             $('.main-menu-btn').toggleClass('close');
             $('.main-menu-btn svg').toggleClass('visible');
             $('.overlay').toggleClass('visible');
@@ -52,6 +55,10 @@ $(function(){
         $('.language-list li').on('click', function() {
             $headerOverlay.toggleClass('show');
             $languageList.toggleClass('open');
+        });
+
+        $clickToToggleSubmenu.on('click', function() {
+            $(this).closest('.submenu-toggle').toggleClass('open');
         });
 
 

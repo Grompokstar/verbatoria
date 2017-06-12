@@ -97,7 +97,6 @@ header {
 
 .header-language-menu {
   position: absolute;
-  top: 1px;
   top: rem-calc(25);
   right: rem-calc(75);
   z-index: 5;
@@ -210,5 +209,34 @@ header {
 
   &.show {
     display: block;
+  }
+}
+
+.header-phone-btn {
+  position: absolute;
+  top: rem-calc(28);
+  right: rem-calc(75);
+  z-index: 5;
+  width: rem-calc(32);
+  height: rem-calc(32);
+  border: rem-calc(1) solid $gray;
+  @include border-radius(50%);
+  color: $gray;
+  background-color: $white;
+  text-transform: uppercase;
+  font-size: rem-calc(14);
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: rem-calc(32);
+  cursor: pointer;
+
+  &:hover {
+    color: $success;
+    border-color: $success;
+  }
+
+  &:active {
+    background-color: $active-button-bg;
   }
 }

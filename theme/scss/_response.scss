@@ -1,6 +1,45 @@
+@import "variables";
+
 @media (min-width: 992px) {
   .container {
     width: 100%;
     max-width: rem-calc(1300);
+  }
+}
+
+@media (max-width: 991px) {
+  .main-menu-btn {
+    border: none;
+
+    &:hover {
+      background-color: $white;
+
+      #Header, #btn_closeMainMenu {
+        fill: $success;
+      }
+    }
+
+    &:active {
+      background-color: $white;
+
+      #Header, #btn_closeMainMenu {
+        fill: $success;
+      }
+    }
+
+    &.close {
+      background-color: $white;
+      color: $success;
+
+      &:hover {
+        background-color: $white;
+        color: $success;
+      }
+
+      &:active {
+        color: $success;
+        background-color: $white;
+      }
+    }
   }
 }

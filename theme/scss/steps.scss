@@ -147,7 +147,7 @@
     display: flex;
     max-width: 1200px;
     margin: auto;
-    z-index: 10;
+    z-index: 5;
     height: 100%;
     position: relative;
 
@@ -258,7 +258,7 @@
 }
 
 #clock-oval {
-  transition: stroke-dashoffset 5s linear;
+  transition: stroke-dashoffset 5s ease;
 
   &.go-time {
     stroke-dashoffset: 0

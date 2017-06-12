@@ -122,16 +122,51 @@ $(function(){
 
         //Шаги "Как мы работаем"
 
+        var isStartStepAnimation = false,
+            currentStepId,
+            stepIcons = $('.step-item-icon'),
+            clickedStepId,
+            $spincrement = $(".spincrement"),
+            $clockOval = $('#clock-oval'),
+            step2Timer, step3Timer;
 
-        var currentStepId;
-        var stepIcons = $('.step-item-icon');
-        var clickedStepId;
+        function startStepsAnimation() {
+            stepIcons.get(0).click();
+            step2Timer =setTimeout(function() {
+                stepIcons.get(1).click();
+            }, 6000);
+
+            step3Timer = setTimeout(function() {
+                stepIcons.get(2).click();
+            }, 12000);
+        }
+
+        $(window).on('scroll', function() {
+            if (!isStartStepAnimation) {
+                var stepsSlider = document.getElementsByClassName('steps-slider'),
+                    rect = stepsSlider[0].getBoundingClientRect(),
+                    d = document.documentElement;
+
+                if (d.clientHeight - rect.bottom > 0) {
+                    startStepsAnimation();
+                    isStartStepAnimation = true;
+                }
+            }
+
+        });
 
 
         stepIcons.on('click', function() {
             currentStepId = $('.step-item-icon.active').attr('data-step');
             clickedStepId = $(this).attr('data-step');
-            $('#clock-oval').addClass('go-time');
+
+            if (clickedStepId == 1) {
+                $clockOval.removeClass('go-time');
+                $clockOval.addClass('go-time');
+                $(".spincrement-1").spincrement({duration: 6000});
+            } else if (clickedStepId == 2) {
+                $(".spincrement-2").spincrement({duration: 6000});
+            }
 
             if (clickedStepId != currentStepId) {
                 stepIcons.removeClass('active');
@@ -145,7 +180,14 @@ $(function(){
         });
 
         $('.slider-btn.left').on('click', function() {
+            clearTimeout(step2Timer);
+            clearTimeout(step3Timer);
             currentStepId = $('.step.current').attr('data-step');
+            if (Number(currentStepId) - 1 === 1) {
+                $(".spincrement-1").spincrement({duration: 6000});
+            } else if (Number(currentStepId) - 1 === 2) {
+                $(".spincrement-2").spincrement({duration: 6000});
+            }
 
             if (currentStepId > 1) {
                 $('#step-' + currentStepId).removeClass('current');
@@ -158,7 +200,15 @@ $(function(){
 
 
         $('.slider-btn.right').on('click', function() {
+            clearTimeout(step2Timer);
+            clearTimeout(step3Timer);
             currentStepId = $('.step.current').attr('data-step');
+            if (Number(currentStepId) + 1 === 1) {
+                $(".spincrement-1").spincrement({duration: 6000});
+            } else if (Number(currentStepId) + 1 === 2) {
+                $(".spincrement-2").spincrement({duration: 6000});
+            }
+            $spincrement.spincrement({duration: 6000});
 
             if (currentStepId < 3) {
                 $('#step-' + currentStepId).removeClass('current');

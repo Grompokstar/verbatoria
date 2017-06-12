@@ -7,7 +7,10 @@ $(function(){
             $cityBtn = $('#city-btn'),
             $cityBtnIcon = $('#city-btn .fa'),
             $cityMenu = $('#city-menu'),
-            $dropdownItems = $('.dropdown li');
+            $dropdownItems = $('.dropdown li'),
+            $languageBtn = $('.language-btn'),
+            $languageList = $('.language-list'),
+            $headerOverlay = $('.header-overlay');
 
         $('.main-menu-btn').on('click', function () {
             $mainMenu.toggleClass('visible');
@@ -39,6 +42,16 @@ $(function(){
             $cityMenu.toggleClass('show');
             var city = $(this).find('a').html();
             $cityBtn.html(city + '<span class="fa fa-angle-down">');
+        });
+
+        $languageBtn.on('click', function() {
+            $headerOverlay.toggleClass('show');
+            $languageList.toggleClass('open');
+        });
+
+        $('.language-list li').on('click', function() {
+            $headerOverlay.toggleClass('show');
+            $languageList.toggleClass('open');
         });
 
 

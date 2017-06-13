@@ -10,23 +10,34 @@
   <script src="theme/js/scripts.js"></script>
 </head>
 <body class="page">
-  <header>
+  <header class="shadow">
+  <div class="header-overlay"></div>
   <div class="container">
     <div class="header-flex-container">
-      <div class="header-language-menu">
+      <div class="header-language-menu hidden-xs hidden-sm">
+        <ul class="language-list">
+          <li>english</li>
+          <li>қазақша</li>
+          <li class="current">русский</li>
+        </ul>
         <button class="language-btn circle">
           ру
         </button>
       </div>
+
+      <div class="header-phone-btn visible-xs visible-sm">
+        <i class="fa fa-phone"></i>
+      </div>
+
       <div class="header__logo">
         <a href="index.html">
           <img src="theme/images/Home/verbatoria_logo.svg" width="211" alt="Логотип Вербатория"/>
         </a>
       </div>
-      <div class="header-flex-item header__link">
+      <div class="header-flex-item header__link hidden-xs hidden-sm">
         <a href="about_method.html">О методе</a>
       </div>
-      <div class="header-flex-item header__link">
+      <div class="header-flex-item header__link hidden-xs hidden-sm">
         <a href="partners.html">Партнерам</a>
       </div>
       <div class="header-flex-item">
@@ -34,12 +45,23 @@
           Онлайн-запись
         </button>
       </div>
-      <div class="header-flex-item">
+      <div class="header-flex-item hidden-xs hidden-sm">
         <div class="header__phone">
           +7 495 123 4748
         </div>
         <div class="header__chose-location">
-          Москва<span class="fa fa-angle-down"></span>
+
+          <div class="dropdown">
+            <a data-toggle="dropdown" id="city-btn">Москва<span class="fa fa-angle-down"></span></a>
+            <ul id="city-menu" class="dropdown-menu">
+              <li><a href="#">Ачинск</a></li>
+              <li><a href="#">Астана</a></li>
+              <li><a href="#">Мытищи</a></li>
+              <li><a href="#">Челябинск</a></li>
+              <li><a href="#">Оренбург</a></li>
+              <li><a href="#">Новосибирск</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="header-flex-item">
@@ -72,40 +94,73 @@
       </div>
     </div>
   </div>
-  <div class="main-menu">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="header_verbatoria-tree-img">
-            <img src="theme/images/Home/verbatoria_tree.svg"  height="250" alt="Дерево Вербатория"/>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="main-menu-title">
-            Диагностика таланта
-          </div>
-          <ul class="main-menu-link-list">
-            <li><a href="#">4-7 лет: Гармоничное развитие</a> </li>
-            <li><a href="#">7-11 лет: Выбор школы и класса</a> </li>
-            <li><a href="#">11-14 лет: Образовательный маршрут</a> </li>
-            <li><a href="#">14-17 лет: Выбор профессии</a> </li>
-            <li><a href="#">17+: Кто Я?</a> </li>
+
+  <div class="visible-xs visible-sm">
+    <div class="mobile-main-menu">
+      <ul class="mobile-menu">
+        <li><a href="#">Выбрать исследование</a></li>
+        <li><a href="#">Как мы работаем</a></li>
+        <li><a href="#">О методе</a></li>
+        <li><a href="#">Партнерам</a></li>
+        <li><a href="#">Оставить заявку</a></li>
+        <div class="submenu-toggle">
+          <div class="click-to-toggle">Москва<span class="fa fa-angle-down"></span><span class="fa fa-angle-up"></span> </div>
+          <ul class="mobile-submenu">
+            <li><a href="#">Санкт-Петербург</a></li>
+            <li><a href="#">Ростов-на-Дону</a></li>
+            <li><a href="#">Екатеринбург</a></li>
+            <li><a href="#">Самара</a></li>
           </ul>
         </div>
-        <div class="col-md-4">
-          <div class="main-menu-title">
-            Партнерам
-          </div>
-          <ul class="main-menu-link-list">
-            <li><a href="businessman.html">Предпринимателям</a> </li>
-            <li><a href="head_of_kindergarten.html">Руководителям детских учреждений</a> </li>
-            <li><a href="psychologist.html">Психологам</a> </li>
-            <li><a href="hr_director.html">HR Директорам</a> </li>
+        <div class="submenu-toggle">
+          <div class="click-to-toggle">Русский<span class="fa fa-angle-down"></span><span class="fa fa-angle-up"></span> </div>
+          <ul class="mobile-submenu">
+            <li><a href="#">English</a></li>
+            <li><a href="#">қазақша</a></li>
+            <li><a href="#">中文(简体)</a></li>
           </ul>
+        </div>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hidden-xs hidden-sm">
+    <div class="main-menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="header_verbatoria-tree-img">
+              <img src="theme/images/Home/verbatoria_tree.svg"  height="250" alt="Дерево Вербатория"/>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="main-menu-title-link">
+              <a href="#choose-age" data-package="4-7">Диагностика таланта</a>
+            </div>
+            <ul class="main-menu-link-list">
+              <li><a href="#choose-age" data-package="4-7">4-7 лет: Гармоничное развитие</a> </li>
+              <li><a href="#choose-age" data-package="7-11">7-11 лет: Выбор школы и класса</a> </li>
+              <li><a href="#choose-age" data-package="11-14">11-14 лет: Образовательный маршрут</a> </li>
+              <li><a href="#choose-age" data-package="14-17">14-17 лет: Выбор профессии</a> </li>
+              <li><a href="#choose-age" data-package="17">17+: Кто Я?</a> </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <div class="main-menu-title-link">
+              <a href="partners.html">Партнерам</a>
+            </div>
+            <ul class="main-menu-link-list">
+              <li><a href="businessman.html">Предпринимателям</a> </li>
+              <li><a href="head_of_kindergarten.html">Руководителям детских учреждений</a> </li>
+              <li><a href="psychologist.html">Психологам</a> </li>
+              <li><a href="hr_director.html">HR Директорам</a> </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 </header>
   <div class="overlay"></div>
 

@@ -7,6 +7,10 @@ header {
   width: 100%;
   background-color: $white;
 
+  &.shadow {
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.17);
+  }
+
   .container {
     position: relative;
   }

@@ -277,7 +277,7 @@ $(function(){
                 $clockOval.addClass('go-time');
                 $(".spincrement-1").spincrement({duration: stepDuration});
             } else if (clickedStepId == 2) {
-                $(".spincrement-2").spincrement({duration: stepDuration});
+                $(".spincrement-2").spincrement({duration: stepDuration-1000});
             } else if (clickedStepId == 3) {
                 $('.diagram-bg').addClass('animate');
                 $sliderBtnRight.hide();

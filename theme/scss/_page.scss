@@ -4,6 +4,10 @@
   padding-top: $header-height;
   font-size: rem-calc(18);
 
+  &.no-bg {
+    background-color: $white;
+  }
+
   /* -------------------------------------------- */
   /* PAGE TITLE */
   /* -------------------------------------------- */

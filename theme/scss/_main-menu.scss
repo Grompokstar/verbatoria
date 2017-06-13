@@ -15,9 +15,19 @@
   padding-left: rem-calc(90);
 }
 
-.main-menu-title {
+.main-menu-title-link {
   font-size: rem-calc(18);
   font-weight: bold;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+
+      border-bottom: solid 2px $success;
+    }
+  }
 }
 
 ul.main-menu-link-list {
@@ -47,6 +57,7 @@ ul.main-menu-link-list {
   color: $gray;
   background-color: $white;
   text-transform: uppercase;
+  transition: all .3s linear;
 
   &.circle {
     @include border-radius(50%)
@@ -122,6 +133,7 @@ ul.main-menu-link-list {
       padding: rem-calc(15);
       border-bottom: solid 1px #e8e8e8;
       cursor: pointer;
+      transition: all .3s linear;
 
       &:hover {
         background-color: rgba(0, 0, 0, 0.1);

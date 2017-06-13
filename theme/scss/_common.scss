@@ -46,14 +46,20 @@ button[type="submit"] {
   background-color: transparent;
   text-transform: uppercase;
   font-size: rem-calc(16);
+  transition: all .3s linear;
 
   &.btn-success {
     border-color: $success;
     color: $success;
 
     &:hover {
-      border-color: darken($success, 10%);
-      color: darken($success, 10%);
+      background-color: $success;
+      color: $white;
+    }
+
+    &:active {
+      background-color: $success-light;
+      color: $white;
     }
   }
 }
@@ -63,8 +69,10 @@ input[type="email"],
 input[type="password"],
 button[type="button"],
 button[type="submit"] {
+  transition: all .1s linear;
+
   &:focus {
-    border-color: $success;
+    border-color: darken($default-border-color, 20%);
   }
 }
 
@@ -76,6 +84,7 @@ button[type="submit"] {
   height: rem-calc(36);
   padding: 0 $padding-lg;
   text-transform: uppercase;
+  transition: all .3s linear;
 
   &.success {
     border-color: $success;

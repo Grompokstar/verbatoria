@@ -87,7 +87,7 @@
       padding: rem-calc(30) rem-calc(25) rem-calc(66) rem-calc(25);
       margin: $margin-lg;
       width: rem-calc(450);
-      box-shadow: 0 0 9px 2px rgba(0, 0, 0, 0.17);
+      box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.17);
       height: rem-calc(666);
 
       .card-inset-shadow {
@@ -102,11 +102,10 @@
       button {
         z-index: 1;
         margin-top: auto;
-
       }
 
       &:hover {
-        box-shadow: 0 0 9px 2px rgba(70, 196, 115, 0.71);
+        box-shadow: 0 0 9px 0 rgba(70, 196, 115, 0.71);
 
         button {
           background-color: $success;
@@ -120,7 +119,7 @@
 
       &:active {
         background-color: $active-button-bg;
-        box-shadow: 0 0 9px 2px rgba(70, 196, 115, 0.71);
+        box-shadow: 0 0 9px 0 rgba(70, 196, 115, 0.71);
 
         .card-inset-shadow {
           box-shadow: inset 0 0 0 2px $success;

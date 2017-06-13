@@ -2,24 +2,43 @@ $(function(){
 
     $(window).ready(function(){
 
+        $("body").on('click', '[href*="#"]', function(e){
+            $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - 90}, 1000);
+            e.preventDefault();
+        });
+
         //header
         var $mainMenu = $('.main-menu'),
+            $mainMenuLinks = $('.main-menu a'),
             $mobileMainMenu = $('.mobile-main-menu'),
             $cityBtn = $('#city-btn'),
-            $cityBtnIcon = $('#city-btn .fa'),
             $cityMenu = $('#city-menu'),
             $dropdownItems = $('.dropdown li'),
             $languageBtn = $('.language-btn'),
             $languageList = $('.language-list'),
             $headerOverlay = $('.header-overlay'),
-            $clickToToggleSubmenu = $('.click-to-toggle');
+            $clickToToggleSubmenu = $('.click-to-toggle'),
+            $chooseAgeLinks = $('a[href="#choose-age"]');
 
-        $('.main-menu-btn').on('click', function () {
+        function toggleMainMenu() {
             $mainMenu.toggleClass('visible');
             $mobileMainMenu.toggleClass('visible');
             $('.main-menu-btn').toggleClass('close');
             $('.main-menu-btn svg').toggleClass('visible');
             $('.overlay').toggleClass('visible');
+        }
+
+        $('.main-menu-btn').on('click', function () {
+            toggleMainMenu();
+        });
+
+        $mainMenuLinks.on('click', function() {
+            toggleMainMenu();
+        });
+
+        $chooseAgeLinks.on('click', function() {
+            var packageId = $(this).attr('data-package');
+            $('.choose-age-item[data-package="' + packageId + '"]').click();
         });
 
         $(document).mouseup(function (e) {
@@ -171,13 +190,20 @@ $(function(){
         //Шаги "Как мы работаем"
 
         var isStartStepAnimation = false,
+            isStarPartnersIncrement = false,
             currentStepId,
             stepIcons = $('.step-item-icon'),
             clickedStepId,
             $spincrement = $(".spincrement"),
             $clockOval = $('#clock-oval'),
             step2Timer, step3Timer,
-            stepCircles = $('.step-item-circle');
+            stepCircles = $('.step-item-circle'),
+            stepDuration = 9000,
+            $sliderBtns = $('.slider-btn'),
+            $sliderBtnLeft = $('.slider-btn.left'),
+            $sliderBtnRight = $('.slider-btn.right');
+
+        $sliderBtnLeft.hide();
 
         function startStepsAnimation() {
             var circleCount = 0,
@@ -188,7 +214,7 @@ $(function(){
                 if (circleCount <= 2) {
                     circleCount++;
                 }
-            }, 1500);
+            }, stepDuration/4);
 
             step2Timer = setTimeout(function() {
                 clearInterval(timerStep1);
@@ -200,42 +226,61 @@ $(function(){
                     if (circleCount <= 5) {
                         circleCount++;
                     }
-                }, 1500);
-            }, 6000);
+                }, stepDuration/4);
+            }, stepDuration);
 
             step3Timer = setTimeout(function() {
                 clearInterval(timerStep2);
                 stepCircles.removeClass('active');
                 stepIcons.get(2).click();
                 $('.diagram-bg').addClass('animate');
-            }, 12000);
+            }, stepDuration*2);
         }
 
         $(window).on('scroll', function() {
+            var d = document.documentElement;
             if (!isStartStepAnimation) {
                 var stepsSlider = document.getElementsByClassName('steps-slider'),
-                    rect = stepsSlider[0].getBoundingClientRect(),
-                    d = document.documentElement;
+                    rectSlider = stepsSlider[0].getBoundingClientRect();
 
-                if (d.clientHeight - rect.bottom > 0) {
+                if (d.clientHeight - rectSlider.bottom > 0) {
                     startStepsAnimation();
                     isStartStepAnimation = true;
                 }
             }
 
+
+
+            if (!isStarPartnersIncrement) {
+                var partnerNumbers = document.getElementsByClassName('partner-numbers'),
+                    rectNumbers = partnerNumbers[0].getBoundingClientRect();
+
+                if (d.clientHeight - rectNumbers.top > 0) {
+                    $('.partners-spincrement').spincrement({
+                        duration: 3000,
+                        thousandSeparator: ''
+                    });
+                    isStarPartnersIncrement = true;
+                }
+            }
         });
 
 
         stepIcons.on('click', function() {
             currentStepId = $('.step-item-icon.active').attr('data-step');
             clickedStepId = $(this).attr('data-step');
+            $sliderBtns.show();
 
             if (clickedStepId == 1) {
+                $sliderBtnLeft.hide();
                 $clockOval.removeClass('go-time');
                 $clockOval.addClass('go-time');
-                $(".spincrement-1").spincrement({duration: 6000});
+                $(".spincrement-1").spincrement({duration: stepDuration});
             } else if (clickedStepId == 2) {
-                $(".spincrement-2").spincrement({duration: 6000});
+                $(".spincrement-2").spincrement({duration: stepDuration});
+            } else if (clickedStepId == 3) {
+                $('.diagram-bg').addClass('animate');
+                $sliderBtnRight.hide();
             }
 
             if (clickedStepId != currentStepId) {
@@ -253,10 +298,15 @@ $(function(){
             clearTimeout(step2Timer);
             clearTimeout(step3Timer);
             currentStepId = $('.step.current').attr('data-step');
+            $sliderBtns.show();
             if (Number(currentStepId) - 1 === 1) {
-                $(".spincrement-1").spincrement({duration: 6000});
+                $(".spincrement-1").spincrement({duration: stepDuration});
+                $sliderBtnLeft.hide();
+                $clockOval.addClass('go-time');
             } else if (Number(currentStepId) - 1 === 2) {
-                $(".spincrement-2").spincrement({duration: 6000});
+                $(".spincrement-2").spincrement({duration: stepDuration});
+            } else if (Number(currentStepId) - 1 === 3) {
+                $sliderBtnRight.hide();
             }
 
             if (currentStepId > 1) {
@@ -273,12 +323,17 @@ $(function(){
             clearTimeout(step2Timer);
             clearTimeout(step3Timer);
             currentStepId = $('.step.current').attr('data-step');
+            $sliderBtns.show();
             if (Number(currentStepId) + 1 === 1) {
-                $(".spincrement-1").spincrement({duration: 6000});
+                $sliderBtnLeft.hide();
+                $(".spincrement-1").spincrement({duration: stepDuration});
             } else if (Number(currentStepId) + 1 === 2) {
-                $(".spincrement-2").spincrement({duration: 6000});
+                $(".spincrement-2").spincrement({duration: stepDuration});
+            } else if (Number(currentStepId) + 1 === 3) {
+                $sliderBtnRight.hide();
+                $('.diagram-bg').addClass('animate');
             }
-            $spincrement.spincrement({duration: 6000});
+            $spincrement.spincrement({duration: stepDuration});
 
             if (currentStepId < 3) {
                 $('#step-' + currentStepId).removeClass('current');

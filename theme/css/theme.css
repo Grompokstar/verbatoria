@@ -2870,7 +2870,7 @@ input[type="email"],
 input[type="password"],
 button[type="button"],
 button[type="submit"] {
-  transition: all .1s linear; }
+  transition: all .3s linear; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="password"]:focus,

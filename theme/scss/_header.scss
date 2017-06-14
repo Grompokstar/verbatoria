@@ -116,7 +116,7 @@ header {
   @include border-radius(36px);
   height: rem-calc(36);
   padding: 0 rem-calc(20);
-  transition: width 1s ease;
+  transition: width 0.5s ease;
   width: 0;
 
   &.open {
@@ -142,7 +142,7 @@ header {
     font-size: rem-calc(14);
     cursor: pointer;
     visibility: hidden;
-    transition: opacity 3s ease;
+    transition: opacity 1.5s ease;
     opacity: 0;
     display: flex;
     align-items: center;
@@ -157,7 +157,7 @@ header {
       font-size: rem-calc(16);
       visibility: hidden;
       opacity: 0;
-      transition: opacity 3s linear;
+      transition: opacity 1.5s linear;
       display: none;
     }
 
@@ -171,6 +171,10 @@ header {
 
     &.current {
       color: $success;
+
+      a:hover {
+        text-decoration: none;
+      }
 
       .fa {
         display: block;

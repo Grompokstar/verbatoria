@@ -9,9 +9,11 @@ $(function(){
 
         //header
         var $mainMenu = $('.main-menu'),
+            $mainMenuBtn = $('.main-menu-btn'),
             $mainMenuLinks = $('.main-menu a'),
             $mobileMainMenu = $('.mobile-main-menu'),
             $cityBtn = $('#city-btn'),
+            $cityBtnAngle = $('#city-btn .fa'),
             $cityMenu = $('#city-menu'),
             $dropdownItems = $('.dropdown li'),
             $languageBtn = $('.language-btn'),
@@ -30,17 +32,29 @@ $(function(){
             $('.overlay').toggleClass('visible');
         }
 
-        $('.main-menu-btn').on('click', function () {
+        function toggleCityMenu() {
+            $cityBtnAngle.toggleClass('fa-angle-down').toggleClass('fa-angle-up');
+            $cityMenu.toggleClass('show');
+        }
+
+        $mainMenuBtn.on('click', function () {
             toggleMainMenu();
+
+            if ($cityMenu.hasClass('show')) {
+                toggleCityMenu();
+            }
         });
 
         $mainMenuLinks.on('click', function() {
             toggleMainMenu();
         });
 
-        $chooseAgeLinks.on('click', function() {
-            var packageId = $(this).attr('data-package');
-            $('.choose-age-item[data-package="' + packageId + '"]').click();
+        $cityBtn.on('click', function() {
+            toggleCityMenu();
+
+            if ($mainMenu.hasClass('visible')) {
+                toggleMainMenu();
+            }
         });
 
         $(document).mouseup(function (e) {
@@ -48,18 +62,15 @@ $(function(){
 
             if (!header.is(e.target) && header.has(e.target).length === 0) {
                 if ($mainMenu.hasClass('visible')) {
-                    $mainMenu.toggleClass('visible');
-                    $('.main-menu-btn').toggleClass('close');
-                    $('.main-menu-btn svg').toggleClass('visible');
-                    $('.overlay').toggleClass('visible');
+                    toggleMainMenu();
                 }
             }
+
         });
 
-        $cityBtn.on('click', function() {
-            $(this).closest('.dropdown').toggleClass('city-bg');
-            $('#city-btn .fa').toggleClass('fa-angle-down').toggleClass('fa-angle-up')
-            $cityMenu.toggleClass('show');
+        $chooseAgeLinks.on('click', function() {
+            var packageId = $(this).attr('data-package');
+            $('.choose-age-item[data-package="' + packageId + '"]').click();
         });
 
         $dropdownItems.on('click', function() {
@@ -205,12 +216,13 @@ $(function(){
             clickedStepId,
             $spincrement = $(".spincrement"),
             $clockOval = $('#clock-oval'),
-            step2Timer, step3Timer,
+            step2Timer, step3Timer, stepReturnTimer,
             stepCircles = $('.step-item-circle'),
             stepDuration = 9000,
             $sliderBtns = $('.slider-btn'),
             $sliderBtnLeft = $('.slider-btn.left'),
-            $sliderBtnRight = $('.slider-btn.right');
+            $sliderBtnRight = $('.slider-btn.right'),
+            $stepIconsDisableOverlay = $('.how-to-work-step-icons .disable-overlay');
 
         $sliderBtnLeft.hide();
 
@@ -218,6 +230,7 @@ $(function(){
             var circleCount = 0,
                 timerStep2;
             stepIcons.get(0).click();
+            $sliderBtns.hide();
             var timerStep1 = setInterval(function() {
                 $(stepCircles.get(circleCount)).addClass('active');
                 if (circleCount <= 2) {
@@ -229,6 +242,7 @@ $(function(){
                 clearInterval(timerStep1);
                 stepCircles.removeClass('active');
                 stepIcons.get(1).click();
+                $sliderBtns.hide();
 
                 timerStep2 = setInterval(function() {
                     $(stepCircles.get(circleCount)).addClass('active');
@@ -242,37 +256,18 @@ $(function(){
                 clearInterval(timerStep2);
                 stepCircles.removeClass('active');
                 stepIcons.get(2).click();
+                $sliderBtns.hide();
                 $('.diagram-bg').addClass('animate');
             }, stepDuration*2);
+
+            stepReturnTimer = setTimeout(function() {
+                $stepIconsDisableOverlay.hide();
+                $sliderBtnLeft.click();
+                setTimeout(function() {
+                    $sliderBtnLeft.click();
+                }, 1000);
+            }, stepDuration*3);
         }
-
-        $(window).on('scroll', function() {
-            var d = document.documentElement;
-            if (!isStartStepAnimation) {
-                var stepsSlider = document.getElementsByClassName('steps-slider'),
-                    rectSlider = stepsSlider[0].getBoundingClientRect();
-
-                if (d.clientHeight - rectSlider.bottom > 0) {
-                    startStepsAnimation();
-                    isStartStepAnimation = true;
-                }
-            }
-
-
-
-            if (!isStarPartnersIncrement) {
-                var partnerNumbers = document.getElementsByClassName('partner-numbers'),
-                    rectNumbers = partnerNumbers[0].getBoundingClientRect();
-
-                if (d.clientHeight - rectNumbers.top > 0) {
-                    $('.partners-spincrement').spincrement({
-                        duration: 3000,
-                        thousandSeparator: ''
-                    });
-                    isStarPartnersIncrement = true;
-                }
-            }
-        });
 
 
         stepIcons.on('click', function() {
@@ -298,23 +293,16 @@ $(function(){
                 $('.step').removeClass('current');
                 $('#step-' + clickedStepId).addClass('current');
             }
-
-
-
         });
 
-        $('.slider-btn.left').on('click', function() {
+        $sliderBtnLeft.on('click', function() {
             clearTimeout(step2Timer);
             clearTimeout(step3Timer);
             currentStepId = $('.step.current').attr('data-step');
             $sliderBtns.show();
             if (Number(currentStepId) - 1 === 1) {
-                $(".spincrement-1").spincrement({duration: stepDuration});
                 $sliderBtnLeft.hide();
-                $clockOval.addClass('go-time');
-            } else if (Number(currentStepId) - 1 === 2) {
-                $(".spincrement-2").spincrement({duration: stepDuration});
-            } else if (Number(currentStepId) - 1 === 3) {
+            }  else if (Number(currentStepId) - 1 === 3) {
                 $sliderBtnRight.hide();
             }
 
@@ -328,19 +316,15 @@ $(function(){
         });
 
 
-        $('.slider-btn.right').on('click', function() {
+        $sliderBtnRight.on('click', function() {
             clearTimeout(step2Timer);
             clearTimeout(step3Timer);
             currentStepId = $('.step.current').attr('data-step');
             $sliderBtns.show();
             if (Number(currentStepId) + 1 === 1) {
                 $sliderBtnLeft.hide();
-                $(".spincrement-1").spincrement({duration: stepDuration});
-            } else if (Number(currentStepId) + 1 === 2) {
-                $(".spincrement-2").spincrement({duration: stepDuration});
             } else if (Number(currentStepId) + 1 === 3) {
                 $sliderBtnRight.hide();
-                $('.diagram-bg').addClass('animate');
             }
             $spincrement.spincrement({duration: stepDuration});
 
@@ -350,6 +334,32 @@ $(function(){
 
                 stepIcons.removeClass('active');
                 $('.step-item-icon[data-step="' + (Number(currentStepId) + 1) +  '"]').addClass('active');
+            }
+        });
+
+        $(window).on('scroll', function() {
+            var d = document.documentElement;
+            if (!isStartStepAnimation) {
+                var stepsSlider = document.getElementsByClassName('steps-slider'),
+                    rectSlider = stepsSlider[0].getBoundingClientRect();
+
+                if (d.clientHeight - rectSlider.bottom > 0) {
+                    startStepsAnimation();
+                    isStartStepAnimation = true;
+                }
+            }
+
+            if (!isStarPartnersIncrement) {
+                var partnerNumbers = document.getElementsByClassName('partner-numbers'),
+                    rectNumbers = partnerNumbers[0].getBoundingClientRect();
+
+                if (d.clientHeight - rectNumbers.top > 0) {
+                    $('.partners-spincrement').spincrement({
+                        duration: 3000,
+                        thousandSeparator: ''
+                    });
+                    isStarPartnersIncrement = true;
+                }
             }
         });
 

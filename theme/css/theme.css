@@ -3307,6 +3307,26 @@ ul.main-menu-link-list {
         .mobile-main-menu .submenu-toggle .mobile-submenu li a {
           color: black; }
 
+.phone-mobile-menu {
+  position: absolute;
+  top: 5.6875rem;
+  right: 0;
+  width: 20.1875rem;
+  background-color: #ffffff;
+  text-align: center;
+  padding-bottom: 1.875rem;
+  display: none; }
+  .phone-mobile-menu.visible {
+    display: block; }
+  .phone-mobile-menu .feedback-phone {
+    text-align: center;
+    margin-top: 0.9375rem;
+    font-size: 2rem;
+    color: #ec5d04; }
+  .phone-mobile-menu .phone-subtext {
+    text-align: center;
+    font-size: 0.875rem; }
+
 /* FONT */
 /* BORDER */
 /* HEADER */

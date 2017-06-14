@@ -197,4 +197,31 @@ ul.main-menu-link-list {
   }
 }
 
+.phone-mobile-menu {
+  position: absolute;
+  top: rem-calc(91);
+  right: 0;
+  width: rem-calc(323);
+  background-color: $white;
+  text-align: center;
+  padding-bottom: rem-calc(30);
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+
+  .feedback-phone {
+    text-align: center;
+    margin-top: rem-calc(15);
+    font-size: rem-calc(32);
+    color: $active-package-section;
+  }
+
+  .phone-subtext {
+    text-align: center;
+    font-size: rem-calc(14);
+  }
+}
+
 

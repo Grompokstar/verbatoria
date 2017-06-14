@@ -12,6 +12,8 @@ $(function(){
             $mainMenuBtn = $('.main-menu-btn'),
             $mainMenuLinks = $('.main-menu a, .mobile-main-menu a'),
             $mobileMainMenu = $('.mobile-main-menu'),
+            $phoneHeaderMenu = $('.phone-mobile-menu'),
+            $phoneHeaderBtn = $('.header-phone-btn'),
             $cityBtn = $('#city-btn'),
             $cityBtnAngle = $('#city-btn .fa'),
             $cityMenu = $('#city-menu'),
@@ -43,6 +45,18 @@ $(function(){
             if ($cityMenu.hasClass('show')) {
                 toggleCityMenu();
             }
+
+            if ($phoneHeaderMenu.hasClass('visible')) {
+                $phoneHeaderMenu.toggleClass('visible');
+            }
+        });
+
+        $phoneHeaderBtn.on('click', function () {
+            $phoneHeaderMenu.toggleClass('visible');
+
+            if ($mainMenu.hasClass('visible')) {
+                toggleMainMenu();
+            }
         });
 
         $mainMenuLinks.on('click', function() {
@@ -63,6 +77,10 @@ $(function(){
             if (!header.is(e.target) && header.has(e.target).length === 0) {
                 if ($mainMenu.hasClass('visible')) {
                     toggleMainMenu();
+                }
+
+                if ($phoneHeaderMenu.hasClass('visible')) {
+                    $phoneHeaderMenu.toggleClass('visible');
                 }
             }
 

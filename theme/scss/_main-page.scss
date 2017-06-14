@@ -44,8 +44,8 @@
   margin: auto;
 
   .main-text {
-    font-family: 'Oswald', sans-serif;
-    font-size: rem-calc(14);
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: rem-calc(16);
     text-transform: uppercase;
     text-align: center;
     margin-bottom: $margin-xs;
@@ -53,6 +53,7 @@
 
   .age {
     text-align: center;
+    font-size: rem-calc(14);
   }
 }
 

@@ -12,6 +12,7 @@
   flex-wrap: wrap;
   max-width: rem-calc(1024);
   margin: auto;
+
   a {
     color: inherit;
     text-decoration: none;
@@ -28,6 +29,7 @@
   background-color: $white;
   position: relative;
   margin: $margin-sm;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.17);
 
   img {
     margin-top: auto;

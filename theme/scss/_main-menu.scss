@@ -151,7 +151,6 @@ ul.main-menu-link-list {
     text-align: center;
     text-transform: uppercase;
     color: $success;
-    background-color: $bg-color;
     border-top: solid 1px #e8e8e8;
 
     .fa-angle-up {
@@ -159,6 +158,8 @@ ul.main-menu-link-list {
     }
 
     &.open {
+      background-color: $bg-color;
+
       .mobile-submenu {
         display: block;
       }

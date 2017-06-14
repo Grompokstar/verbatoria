@@ -63,7 +63,126 @@
     }
   }
 
-  .main-page__partners {
-    padding: 0;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .package-section {
+    .package-section__title {
+      font-size: rem-calc(22);
+    }
   }
+
+  .package-section-description {
+    padding-left: rem-calc(49);
+    padding-right: rem-calc(32);
+
+    .section-description-title {
+      font-size: rem-calc(26);
+    }
+
+    .section-description-subtitle {
+      font-size: rem-calc(20);
+    }
+
+    .section-description-text {
+      font-size: rem-calc(16);
+    }
+  }
+
+  .how-to-work {
+    .how-to-work-title {
+      padding-right: 0;
+    }
+
+    .how-to-work-step-icons {
+      padding-left: rem-calc(30);
+    }
+  }
+
+  .steps-slider {
+    .step {
+      .left-block {
+        padding-left: rem-calc(98);
+        padding-right: 0;
+      }
+
+      .right-block {
+        padding: 0 rem-calc(50)
+      }
+    }
+  }
+
+  .main-page__partners {
+    padding-left: rem-calc(10);
+    padding-right: rem-calc(10);
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: rem-calc(260);
+
+    &::-webkit-input-placeholder {
+      font-size: rem-calc(18);
+    }
+
+    &::-moz-placeholder {
+      font-size: rem-calc(18);
+    }
+  }
+
+  .diagram-bg {
+    width: rem-calc(122);
+    height: rem-calc(120);
+  }
+
+  .method-card {
+    width: rem-calc(332);
+  }
+
+  .page__partner-cards {
+
+    .cards-wrapper {
+
+      .card {
+        width: rem-calc(322);
+      }
+
+      .card-title.mb-6 {
+        margin-bottom: rem-calc(40) !important;
+      }
+
+      .card-title.mb-3 {
+        margin-bottom: rem-calc(10) !important;
+      }
+
+
+      .card-text {
+        font-size: rem-calc(16);
+        margin-bottom: rem-calc(15) !important;
+      }
+
+      .card-bold-text {
+        font-size: rem-calc(16);
+      }
+    }
+  }
+
+  .left-20 {
+    position: relative;
+    left: rem-calc(-20);
+  }
+
+  .page {
+    .page-list-title {
+      font-size: rem-calc(28);
+    }
+
+    .page-list ul li {
+      padding-left: 0;
+      margin-bottom: rem-calc(15);
+    }
+  }
+
+
 }

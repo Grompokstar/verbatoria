@@ -126,6 +126,12 @@ header {
     li {
       visibility: visible;
       opacity: 1;
+
+      .fa {
+        visibility: visible;
+        opacity: 1;
+      }
+
     }
   }
 
@@ -136,8 +142,24 @@ header {
     font-size: rem-calc(14);
     cursor: pointer;
     visibility: hidden;
-    transition: opacity 2s ease;
+    transition: opacity 3s ease;
     opacity: 0;
+    display: flex;
+    align-items: center;
+
+    a {
+      color: inherit;
+    }
+
+    .fa {
+      width: rem-calc(25);
+      font-weight: normal;
+      font-size: rem-calc(16);
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 3s linear;
+      display: none;
+    }
 
     &:hover {
       text-decoration: underline;
@@ -148,7 +170,15 @@ header {
     }
 
     &.current {
-      color: $success
+      color: $success;
+
+      .fa {
+        display: block;
+      }
+    }
+
+    &.check-icon {
+      width: rem-calc(15);
     }
   }
 }

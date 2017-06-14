@@ -16,6 +16,8 @@ $(function(){
             $dropdownItems = $('.dropdown li'),
             $languageBtn = $('.language-btn'),
             $languageList = $('.language-list'),
+            $languageListItems = $('.language-list li'),
+            $languageListLiks = $('.language-list li a'),
             $headerOverlay = $('.header-overlay'),
             $clickToToggleSubmenu = $('.click-to-toggle'),
             $chooseAgeLinks = $('a[href="#choose-age"]');
@@ -71,9 +73,16 @@ $(function(){
             $languageList.toggleClass('open');
         });
 
-        $('.language-list li').on('click', function() {
+        $languageListLiks.on('click', function() {
             $headerOverlay.toggleClass('show');
             $languageList.toggleClass('open');
+
+            var languageFirsTwoSimbols = $(this).html().substr(0, 2);
+            $languageBtn.html(languageFirsTwoSimbols);
+
+            $languageListItems.removeClass('current');
+
+            $(this).closest('li').addClass('current');
         });
 
         $clickToToggleSubmenu.on('click', function() {

@@ -152,6 +152,7 @@
 
   .step-content-container {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: auto;
     z-index: 5;

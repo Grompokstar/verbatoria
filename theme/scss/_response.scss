@@ -183,6 +183,63 @@
       margin-bottom: rem-calc(15);
     }
   }
+}
 
+@media (max-width: 767px) {
+  .page {
+    padding-top: rem-calc(61);
+  }
 
+  .header-flex-container {
+    padding: $padding-sm 0;
+  }
+
+  .header__logo {
+    img {
+      width: 180px;
+    }
+  }
+
+  .header-phone-btn {
+    top: rem-calc(14)
+  }
+
+  .steps-slider {
+    .step {
+      .left-block {
+        padding: rem-calc(20);
+      }
+    }
+  }
+
+  .phone-mobile-menu {
+    top: rem-calc(61);
+    width: 100%;
+    height: 500px;
+  }
+
+  .round-button.xxl-btn {
+    height: rem-calc(55);
+    padding: 0 rem-calc(50);
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: rem-calc(280);
+
+    &::-webkit-input-placeholder {
+      font-size: rem-calc(18);
+    }
+
+    &::-moz-placeholder {
+      font-size: rem-calc(18);
+    }
+  }
+
+  .header {
+    .container {
+      padding: 0 !important;
+    }
+  }
 }

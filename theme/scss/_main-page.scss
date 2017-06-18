@@ -276,6 +276,7 @@
 
   .partners-logo {
     display: flex;
+    flex-wrap: wrap;
 
     .logo-item {
       height: rem-calc(80);

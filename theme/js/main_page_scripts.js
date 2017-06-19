@@ -40,16 +40,20 @@ $(function(){
             }, 5000);
         }, 10000);
 
+
+
+        // Пакеты исследований
+
         var packageScheme = {
-            "4-7": [1, 2, 3, 12],
-            "7-11": [1, 5, 2, 3, 6],
-            "11-14": [1, 7, 2, 3, 8],
-            "14-17": [1, 9, 4, 3],
-            "17": [11, 10, 3]
+            "4-7": [1, 2, 12],
+            "7-11": [1, 5, 2, 6],
+            "11-14": [1, 7, 2, 8],
+            "14-17": [1, 9, 4],
+            "17": [11, 10]
         };
 
         var currentPackage = $('.choose-age-item.active').attr('data-package');
-        var $packageSections = $('.package-section');
+        var $packageSections = $('.package-section:not(.static)');
         var $ageItems = $('.choose-age-item');
         var sectionBackground = $('.package-section-description');
         var backgrounds = ['2_4-7', '2_7-11', '2_11-14', '3_4-7', '3_7-11', '3_11-14', '3_14-17', '3_17', '4_14-17',
@@ -59,9 +63,6 @@ $(function(){
             $('.package-section[data-id="' + id + '"]').addClass('show-section').css('order', i);
         });
 
-
-
-        // Пакеты исследований
 
         $ageItems.on('click', function() {
             $ageItems.removeClass('active');
@@ -86,7 +87,7 @@ $(function(){
                     sectionBackground.css('background-image', 'url("theme/images/Home/bullets_bg/' + sectionBgIndex + '.jpg")');
                 }
 
-                $currentSection.addClass('show-section').css('order', i);
+                $currentSection.addClass('show-section').css('order', i-5);
             });
         });
 

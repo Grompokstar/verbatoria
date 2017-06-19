@@ -106,6 +106,38 @@
   margin-bottom: $margin-lg;
   order: 0;
 
+  &.static {
+    margin-top: rem-calc(10);
+    padding-top: rem-calc(30);
+    border-top: dashed 1px #808080;
+    position: relative;
+
+    .package-section__title {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      align-items: flex-end;
+    }
+  }
+
+  .package-section__additional-text {
+    color: #808080;
+    position: absolute;
+    top: -9px;
+    left: 48px;
+    background-color: $white;
+    font-size: rem-calc(12);
+    text-transform: uppercase;
+    padding: 0 rem-calc(24);
+  }
+
+  .package-section__additional-price {
+    color: #808080;
+    font-size: rem-calc(14);
+    padding-bottom: rem-calc(3);
+  }
+
   &.show-section {
     display: flex;
   }
@@ -140,7 +172,7 @@
 .package-section-list {
   display: flex;
   flex-direction: column;
-  margin: rem-calc(40) 7% rem-calc(40) $margin-sm;
+  margin: rem-calc(30) 7% rem-calc(20) $margin-sm;
   width: rem-calc(430);
 }
 

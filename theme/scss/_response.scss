@@ -183,6 +183,12 @@
       margin-bottom: rem-calc(15);
     }
   }
+
+  .package-section {
+    .package-section__title {
+      font-size: rem-calc(16);
+    }
+  }
 }
 
 @media (max-width: 767px) {

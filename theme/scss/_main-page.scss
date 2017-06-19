@@ -103,12 +103,12 @@
   display: none;
   align-items: center;
   cursor: pointer;
-  margin-bottom: $margin-lg;
+  margin-bottom: rem-calc(17.5);
   order: 0;
 
   &.static {
-    margin-top: rem-calc(10);
-    padding-top: rem-calc(30);
+    margin-top: rem-calc(19);
+    padding-top: rem-calc(32.5);
     border-top: dashed 1px #808080;
     position: relative;
 

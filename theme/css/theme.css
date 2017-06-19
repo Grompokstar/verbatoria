@@ -3507,11 +3507,11 @@ ul.main-menu-link-list {
   display: none;
   align-items: center;
   cursor: pointer;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.09375rem;
   order: 0; }
   .package-section.static {
-    margin-top: 0.625rem;
-    padding-top: 1.875rem;
+    margin-top: 1.1875rem;
+    padding-top: 2.03125rem;
     border-top: dashed 1px #808080;
     position: relative; }
     .package-section.static .package-section__title {
@@ -4384,7 +4384,10 @@ footer {
     font-size: 1.75rem; }
   .page .page-list ul li {
     padding-left: 0;
-    margin-bottom: 0.9375rem; } }
+    margin-bottom: 0.9375rem; }
+
+  .package-section .package-section__title {
+    font-size: 1rem; } }
 @media (max-width: 767px) {
   .page {
     padding-top: 3.8125rem; }

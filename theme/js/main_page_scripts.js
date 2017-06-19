@@ -14,20 +14,20 @@ $(function(){
         setTimeout(function() {
             $('.slider-img').hide();
             $('.slider-circles').show();
-            $(sliders[i]).toggleClass('show');
-            $(sliders[i+1]).toggleClass('show');
+            $(sliders[i]).toggleClass('current');
+            $(sliders[i+1]).toggleClass('current');
             i++;
             $('video').get(0).play();
 
             setInterval(function() {
                 if (i === 0  && repeat) {
-                    $(sliders[sliders.length-1]).toggleClass('show');
-                    $(sliders[i+1]).toggleClass('show');
+                    $(sliders[sliders.length-1]).toggleClass('current');
+                    $(sliders[i+1]).toggleClass('current');
                     $(sliderCircles[sliderCircles.length - 1]).toggleClass('active');
                     $(sliderCircles[i]).toggleClass('active');
                 } else {
-                    $(sliders[i]).toggleClass('show');
-                    $(sliders[i+1]).toggleClass('show');
+                    $(sliders[i]).toggleClass('current');
+                    $(sliders[i+1]).toggleClass('current');
                     $(sliderCircles[i-1]).toggleClass('active');
                     $(sliderCircles[i]).toggleClass('active');
                 }

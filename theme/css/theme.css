@@ -3338,8 +3338,6 @@ ul.main-menu-link-list {
 /* PADDINGS */
 /* MARGINS */
 .video-slider {
-  display: flex;
-  align-items: center;
   width: 100%;
   height: 37.5rem;
   overflow: hidden;
@@ -3367,17 +3365,21 @@ ul.main-menu-link-list {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../images/Home/photos/start_img.jpg") no-repeat;
+  background: #ffffff url("../images/Home/photos/start_img.jpg") no-repeat;
   background-size: cover; }
 
 .video-slider__text {
+  display: flex;
+  align-items: center;
   position: absolute;
+  top: 0;
+  bottom: 0;
   left: 120%;
   margin: auto;
   transition: left 1s ease;
   color: #ffffff;
   width: 100%; }
-  .video-slider__text.show {
+  .video-slider__text.current {
     left: 0; }
   .video-slider__text .text-item {
     text-align: center;

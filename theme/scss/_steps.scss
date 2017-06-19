@@ -9,7 +9,7 @@
   font-size: rem-calc(32);
   text-transform: uppercase;
   text-align: right;
-  padding-top: $padding-md;
+  padding-top: rem-calc(13);
   padding-right: rem-calc(50);
 }
 
@@ -152,6 +152,7 @@
 
   .step-content-container {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: auto;
     z-index: 5;

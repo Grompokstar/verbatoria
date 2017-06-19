@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=b49c9471bcca8c8686f4a53021432ab9)
- * Config saved to config.json and https://gist.github.com/b49c9471bcca8c8686f4a53021432ab9
+ * Generated using the Bootstrap Customizer (http://bootstrap-3.ru/customize.php?id=6efef1fb03ce3db7ffc02817c4afb3b9)
+ * Config saved to config.json and https://gist.github.com/6efef1fb03ce3db7ffc02817c4afb3b9
  */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -213,8 +213,8 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
   background-color: #ffffff;
@@ -228,12 +228,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #428bca;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #2a6496;
   text-decoration: underline;
 }
 a:focus {
@@ -271,8 +271,8 @@ img {
   border-radius: 50%;
 }
 hr {
-  margin-top: 22px;
-  margin-bottom: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border: 0;
   border-top: 1px solid #eeeeee;
 }
@@ -964,6 +964,32 @@ hr {
   .col-lg-offset-0 {
     margin-left: 0%;
   }
+}
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+.embed-responsive-4by3 {
+  padding-bottom: 75%;
 }
 .clearfix:before,
 .clearfix:after,

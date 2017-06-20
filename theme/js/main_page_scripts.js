@@ -33,6 +33,9 @@ $(function(){
                     sliderTextItems.eq(i).addClass('visible-text');
                     $(sliderCircles[sliderCircles.length - 1]).toggleClass('active');
                     $(sliderCircles[i]).toggleClass('active');
+                    videos.get(3).pause();
+                    videos.get(i).currentTime = 0;
+                    videos.get(i).play();
                 } else if (repeat) {
                     slidesContainer.removeClassWild("show-*");
                     slidesContainer.addClass('show-' + i);
@@ -40,6 +43,9 @@ $(function(){
                     sliderTextItems.eq(i).addClass('visible-text');
                     $(sliderCircles[i - 1]).toggleClass('active');
                     $(sliderCircles[i]).toggleClass('active');
+                    videos.get(i - 1).pause();
+                    videos.get(i).currentTime = 0;
+                    videos.get(i).play();
                 } else {
                     slidesContainer.removeClassWild("show-*");
                     slidesContainer.addClass('show-' + (i+1));
@@ -47,6 +53,7 @@ $(function(){
                     sliderTextItems.eq(i + 1).addClass('visible-text');
                     $(sliderCircles[i]).toggleClass('active');
                     $(sliderCircles[i + 1]).toggleClass('active');
+                    videos.get(i).pause();
                     videos.get(i+1).play();
                 }
 
@@ -75,6 +82,15 @@ $(function(){
             slidesContainer.addClass('show-' + clickedSlideId);
             sliderTextItems.removeClass('visible-text');
             sliderTextItems.eq(clickedSlideId).addClass('visible-text');
+
+            for (var i = 0; i < videos.length; i++) {
+                if (i !== clickedSlideId) {
+                    videos.get(i).pause();
+                }
+            }
+
+            videos.get(clickedSlideId).currentTime = 0;
+            videos.get(clickedSlideId).play();
         });
 
 

@@ -3382,7 +3382,7 @@ ul.main-menu-link-list {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff url("../images/Home/photos/start_img.jpg") no-repeat center;
+  background: #ffffff url("../images/Home/photos/start_img.jpg") no-repeat;
   background-size: cover;
   z-index: 3;
   transition: left 1s ease; }
@@ -4491,6 +4491,9 @@ footer {
   .steps-slider .step .left-block {
     padding: 1.25rem; }
 
+  .slider-img {
+    background-position: center; }
+
   .phone-mobile-menu {
     top: 3.8125rem;
     width: 100%;
@@ -4549,6 +4552,39 @@ footer {
 
   .slider-circles {
     bottom: 1.875rem; }
+
+  .choose-age {
+    background-color: #ffffff;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0; }
+
+  .choose-age-text {
+    text-align: center; }
+
+  .choose-age-item {
+    flex-basis: 50%;
+    border-top: solid 1px #d8d8d8;
+    padding-bottom: 0.8125rem; }
+    .choose-age-item .choose-age-icon {
+      margin: auto;
+      border: none !important; }
+      .choose-age-item .choose-age-icon .choose-age-second-border {
+        border: none; }
+
+  .choose-age-item:nth-child(odd) {
+    border-left: solid 1px #d8d8d8; }
+
+  .choose-age-item:last-child {
+    flex-basis: 100%; }
+
+  .choose-age-icon-text .main-text {
+    font-size: 0.875rem; }
+  .choose-age-icon-text .age {
+    font-size: 0.875rem; }
+
+  .choose-age-item.active .choose-age-icon-text {
+    color: inherit; }
 
   .package-section .package-section__title {
     font-size: 1rem; }

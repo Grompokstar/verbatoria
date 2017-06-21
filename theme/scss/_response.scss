@@ -66,6 +66,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   .package-section {
     .package-section__title {
       font-size: rem-calc(22);
@@ -223,6 +224,10 @@
     }
   }
 
+  .slider-img {
+    background-position: center;
+  }
+
   .phone-mobile-menu {
     top: rem-calc(61);
     width: 100%;
@@ -296,6 +301,54 @@
 
   .slider-circles {
     bottom: rem-calc(30);
+  }
+
+  .choose-age {
+    background-color: $white;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .choose-age-text {
+    text-align: center;
+  }
+
+  .choose-age-item {
+    flex-basis: 50%;
+    border-top: solid 1px #d8d8d8;
+    padding-bottom: rem-calc(13);
+
+    .choose-age-icon {
+      margin: auto;
+      border: none !important;
+
+      .choose-age-second-border {
+        border: none;
+      }
+    }
+  }
+
+  .choose-age-item:nth-child(odd) {
+    border-left: solid 1px #d8d8d8;
+  }
+
+  .choose-age-item:last-child {
+    flex-basis: 100%;
+  }
+
+  .choose-age-icon-text {
+    .main-text {
+      font-size: rem-calc(14);
+    }
+
+    .age {
+      font-size: rem-calc(14);
+    }
+  }
+
+  .choose-age-item.active .choose-age-icon-text {
+    color: inherit;
   }
 
   .package-section {

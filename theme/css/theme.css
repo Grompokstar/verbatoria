@@ -4911,6 +4911,10 @@ footer {
   .xs-bg-color-default {
     background-color: #f5f5f5; }
 
+  .common-feedback {
+    padding-top: 2.8125rem !important;
+    padding-bottom: 2.8125rem !important; }
+
   .page .page-title {
     padding-left: 0;
     padding-right: 0; }

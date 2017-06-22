@@ -17,7 +17,7 @@ $(function(){
             repeat = false,
             firstVideo = document.getElementById('first-video'),
             $playBtnCircle = $('#play-btn-circle'),
-            desktop = !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || document.body.clientWidth >= 768;
+            desktop = !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
         if (desktop) {
             setTimeout(function() {

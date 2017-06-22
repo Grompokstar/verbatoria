@@ -4862,6 +4862,17 @@ footer {
     padding-top: 2.8125rem !important;
     padding-bottom: 3.125rem !important; }
     .common-feedback .common-feedback__text {
-      font-size: 1.125rem; } }
+      font-size: 1.125rem; }
+
+  .about-method__title {
+    margin-top: 1.5625rem !important;
+    margin-bottom: 1.875rem !important; }
+
+  .method-card {
+    height: auto;
+    padding: 1.75rem 1.25rem 2.5625rem; }
+
+  .method-cards {
+    margin-bottom: 4.75rem !important; } }
 
 /*# sourceMappingURL=theme.css.map */

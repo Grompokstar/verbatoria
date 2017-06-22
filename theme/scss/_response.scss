@@ -618,4 +618,20 @@
       font-size: rem-calc(18);
     }
   }
+
+  // страница "О методе"
+
+  .about-method__title {
+    margin-top: rem-calc(25) !important;
+    margin-bottom: rem-calc(30) !important;
+  }
+
+  .method-card {
+    height: auto;
+    padding: rem-calc(28) rem-calc(20) rem-calc(41);
+  }
+
+  .method-cards {
+    margin-bottom: rem-calc(76) !important;
+  }
 }

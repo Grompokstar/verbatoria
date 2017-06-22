@@ -543,4 +543,79 @@
       margin-bottom: rem-calc(55);
     }
   }
+
+
+  //partners page
+
+  .page__partner-numbers {
+    background: none;
+    padding-bottom: rem-calc(40);
+
+    .number-item {
+      .number {
+        font-size: rem-calc(40);
+        padding: 0 !important;
+
+      }
+
+      .partner-numbers-text {
+        font-size: rem-calc(11);
+      }
+
+      img {
+        width: 30px;
+      }
+    }
+
+    .number-item:last-child {
+      margin-left: 10px;
+    }
+  }
+
+  .page__partner-cards {
+    .cards-wrapper {
+      .card {
+        width: 100%;
+        margin: 0;
+        margin-bottom: rem-calc(20);
+        padding-bottom: rem-calc(45);
+      }
+    }
+  }
+
+  .page__partner-cards {
+    margin-top: 0;
+    margin-bottom: rem-calc(25) !important;
+
+    .page__partners-title {
+      font-size: rem-calc(28);
+      padding: 0 rem-calc(30);
+      margin-bottom: rem-calc(49) !important;
+    }
+
+    .cards-wrapper {
+      .card-title {
+        margin-bottom: rem-calc(25) !important;
+      }
+
+      .card-bold-text {
+        font-size: rem-calc(16);
+      }
+
+      .card-text {
+        font-size: rem-calc(16);
+        margin-bottom: rem-calc(20) !important;
+      }
+    }
+  }
+
+  .common-feedback {
+    background-color: $white;
+    padding-top: rem-calc(45) !important;
+    padding-bottom: rem-calc(50) !important;
+
+    .common-feedback__text {
+      font-size: rem-calc(18);
+    }
+  }
 }

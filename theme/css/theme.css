@@ -4821,6 +4821,47 @@ footer {
     footer div {
       text-align: center; }
     footer .footer-mobile-block {
-      margin-bottom: 3.4375rem; } }
+      margin-bottom: 3.4375rem; }
+
+  .page__partner-numbers {
+    background: none;
+    padding-bottom: 2.5rem; }
+    .page__partner-numbers .number-item .number {
+      font-size: 2.5rem;
+      padding: 0 !important; }
+    .page__partner-numbers .number-item .partner-numbers-text {
+      font-size: 0.6875rem; }
+    .page__partner-numbers .number-item img {
+      width: 30px; }
+    .page__partner-numbers .number-item:last-child {
+      margin-left: 10px; }
+
+  .page__partner-cards .cards-wrapper .card {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1.25rem;
+    padding-bottom: 2.8125rem; }
+
+  .page__partner-cards {
+    margin-top: 0;
+    margin-bottom: 1.5625rem !important; }
+    .page__partner-cards .page__partners-title {
+      font-size: 1.75rem;
+      padding: 0 1.875rem;
+      margin-bottom: 3.0625rem !important; }
+    .page__partner-cards .cards-wrapper .card-title {
+      margin-bottom: 1.5625rem !important; }
+    .page__partner-cards .cards-wrapper .card-bold-text {
+      font-size: 1rem; }
+    .page__partner-cards .cards-wrapper .card-text {
+      font-size: 1rem;
+      margin-bottom: 1.25rem !important; }
+
+  .common-feedback {
+    background-color: #ffffff;
+    padding-top: 2.8125rem !important;
+    padding-bottom: 3.125rem !important; }
+    .common-feedback .common-feedback__text {
+      font-size: 1.125rem; } }
 
 /*# sourceMappingURL=theme.css.map */

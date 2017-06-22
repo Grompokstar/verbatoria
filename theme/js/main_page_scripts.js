@@ -38,7 +38,7 @@ $(function(){
             var progress = 200 - (firstVideo.currentTime / duration) * 200;
 
             $playBtnCircle.attr('stroke-dashoffset', progress);
-            if (progress === 200) {
+            if (progress < 10) {
                 startVideoSlider();
             }
         }

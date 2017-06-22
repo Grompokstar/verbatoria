@@ -681,6 +681,13 @@
     background-color: $bg-color;
   }
 
+  .common-feedback {
+    padding: {
+      top: rem-calc(45) !important;
+      bottom: rem-calc(45) !important;
+    }
+  }
+
   .page {
 
     .page-title {

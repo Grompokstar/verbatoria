@@ -634,4 +634,41 @@
   .method-cards {
     margin-bottom: rem-calc(76) !important;
   }
+
+  .article {
+    padding: rem-calc(30) rem-calc(5) !important;
+    font-size: rem-calc(14);
+
+    .font-lg {
+      font-size: rem-calc(16);
+    }
+  }
+
+  .article-title {
+    font-size: rem-calc(28);
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    @include border-radius(50%);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12);
+    color: $gray;
+    font-size: 24px;
+    cursor: pointer;
+
+    .fa-angle-right {
+      position: relative;
+      top: -2px;
+      left: 10px;
+    }
+    .fa-angle-left {
+      position: relative;
+      top: -2px;
+      left: 2px;
+    }
+  }
 }

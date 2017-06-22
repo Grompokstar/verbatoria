@@ -515,6 +515,7 @@
   .common-feedback {
     padding-top: rem-calc(30);
     padding-bottom: 0;
+
     .common-feedback__form {
       input {
         margin-bottom: rem-calc(20);
@@ -611,8 +612,6 @@
 
   .common-feedback {
     background-color: $white;
-    padding-top: rem-calc(45) !important;
-    padding-bottom: rem-calc(50) !important;
 
     .common-feedback__text {
       font-size: rem-calc(18);
@@ -669,6 +668,99 @@
       position: relative;
       top: -2px;
       left: 2px;
+    }
+  }
+
+  //partners pages
+
+  .xs-bg-color-white {
+    background-color: $white;
+  }
+
+  .xs-bg-color-default {
+    background-color: $bg-color;
+  }
+
+  .page {
+
+    .page-title {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .page-title__subText {
+      font-size: rem-calc(16);
+    }
+
+    .page-title__mainText {
+      font-size: rem-calc(32);
+    }
+
+    .page-list-title {
+      font-size: rem-calc(32);
+    }
+
+    .page-block.px-2 {
+      padding: 0 !important;
+    }
+
+    .page-list {
+      margin-bottom: rem-calc(30);
+
+      ul {
+        li {
+          font-size: rem-calc(16);
+          padding-left: rem-calc(5);
+        }
+      }
+    }
+
+    .page-block__results {
+      height: auto;
+
+      &.pr-35 {
+        padding-right: 0 !important;
+      }
+
+      .page-list {
+        padding-bottom: 0;
+      }
+    }
+
+    .half-screen-img {
+      position: relative;
+      width: 100%;
+      height: 300px
+    }
+
+    .page-results-title {
+      font-size: rem-calc(28);
+      text-align: center;
+    }
+
+    .page-block__title {
+      font-size: rem-calc(28);
+      margin-bottom: rem-calc(30);
+    }
+
+    .economic-item {
+      font-size: rem-calc(14);
+      margin-bottom: rem-calc(35);
+    }
+
+    .green-xxl-text {
+      font-size: rem-calc(42);
+    }
+
+    .page-block-no-bg {
+      padding-right: rem-calc(20) !important;
+      padding-left: rem-calc(20) !important;
+      padding-bottom: rem-calc(20);
+    }
+
+    .results-text {
+      padding: 0 rem-calc(5);
+      font-size: rem-calc(16);
+      padding-bottom: rem-calc(20);
     }
   }
 }

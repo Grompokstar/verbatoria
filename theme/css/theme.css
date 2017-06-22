@@ -4858,9 +4858,7 @@ footer {
       margin-bottom: 1.25rem !important; }
 
   .common-feedback {
-    background-color: #ffffff;
-    padding-top: 2.8125rem !important;
-    padding-bottom: 3.125rem !important; }
+    background-color: #ffffff; }
     .common-feedback .common-feedback__text {
       font-size: 1.125rem; }
 
@@ -4905,6 +4903,58 @@ footer {
     .close-btn .fa-angle-left {
       position: relative;
       top: -2px;
-      left: 2px; } }
+      left: 2px; }
+
+  .xs-bg-color-white {
+    background-color: #ffffff; }
+
+  .xs-bg-color-default {
+    background-color: #f5f5f5; }
+
+  .page .page-title {
+    padding-left: 0;
+    padding-right: 0; }
+  .page .page-title__subText {
+    font-size: 1rem; }
+  .page .page-title__mainText {
+    font-size: 2rem; }
+  .page .page-list-title {
+    font-size: 2rem; }
+  .page .page-block.px-2 {
+    padding: 0 !important; }
+  .page .page-list {
+    margin-bottom: 1.875rem; }
+    .page .page-list ul li {
+      font-size: 1rem;
+      padding-left: 0.3125rem; }
+  .page .page-block__results {
+    height: auto; }
+    .page .page-block__results.pr-35 {
+      padding-right: 0 !important; }
+    .page .page-block__results .page-list {
+      padding-bottom: 0; }
+  .page .half-screen-img {
+    position: relative;
+    width: 100%;
+    height: 300px; }
+  .page .page-results-title {
+    font-size: 1.75rem;
+    text-align: center; }
+  .page .page-block__title {
+    font-size: 1.75rem;
+    margin-bottom: 1.875rem; }
+  .page .economic-item {
+    font-size: 0.875rem;
+    margin-bottom: 2.1875rem; }
+  .page .green-xxl-text {
+    font-size: 2.625rem; }
+  .page .page-block-no-bg {
+    padding-right: 1.25rem !important;
+    padding-left: 1.25rem !important;
+    padding-bottom: 1.25rem; }
+  .page .results-text {
+    padding: 0 0.3125rem;
+    font-size: 1rem;
+    padding-bottom: 1.25rem; } }
 
 /*# sourceMappingURL=theme.css.map */

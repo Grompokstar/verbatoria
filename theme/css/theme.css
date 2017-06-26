@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(../fonts/Lato/stylesheet.css);
+@import url(../fonts/Lato/stylename.css);
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:500&subset=cyrillic");
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2806,7 +2806,7 @@
 /* MARGINS */
 html,
 body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "LatoRegular", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.42857143;
   color: #333333;
@@ -2890,7 +2890,7 @@ button[type="submit"] {
   -ms-border-radius: 18px;
   border-radius: 18px;
   font-size: 0.875rem;
-  font-weight: bold;
+  font-family: 'LatoBold', sans-serif;
   border: 0.125rem solid #c1c1c1;
   height: 2.25rem;
   padding: 0 1.25rem;
@@ -3010,7 +3010,7 @@ header {
   color: inherit;
   text-transform: uppercase;
   font-size: 0.875rem;
-  font-weight: bold;
+  font-family: 'LatoBold', sans-serif;
   padding-bottom: 0.5rem; }
   .header__link a:hover {
     text-decoration: none;
@@ -3025,13 +3025,13 @@ header {
 .header__phone {
   color: #46c573;
   line-height: 1.125rem;
-  font-weight: bold; }
+  font-family: 'LatoBold', sans-serif; }
 
 .header__chose-location {
   font-size: 0.8125rem;
   line-height: 1.25rem;
   color: #c1c1c1;
-  font-weight: bold;
+  font-family: 'LatoBold', sans-serif;
   cursor: pointer; }
   .header__chose-location .fa {
     font-weight: normal;
@@ -3074,7 +3074,7 @@ header {
   .language-list li {
     padding: 0 1.5625rem;
     text-transform: uppercase;
-    font-weight: bold;
+    font-family: 'LatoBold', sans-serif;
     font-size: 0.875rem;
     cursor: pointer;
     visibility: hidden;
@@ -3115,7 +3115,7 @@ header {
   text-transform: uppercase;
   z-index: 10;
   font-size: 0.875rem;
-  font-weight: bold;
+  font-family: 'LatoBold', sans-serif;
   transition: all .3s linear; }
   .language-btn.circle {
     -webkit-border-radius: 50%;
@@ -3169,7 +3169,7 @@ header {
   background-color: #ffffff;
   text-transform: uppercase;
   font-size: 0.875rem;
-  font-weight: bold;
+  font-family: 'LatoBold', sans-serif;
   text-align: center;
   vertical-align: middle;
   line-height: 2rem;
@@ -3200,7 +3200,7 @@ header {
 
 .main-menu-title-link {
   font-size: 1.125rem;
-  font-weight: bold; }
+  font-family: 'LatoBold', sans-serif; }
   .main-menu-title-link a {
     color: inherit; }
     .main-menu-title-link a:hover {
@@ -3476,7 +3476,7 @@ ul.main-menu-link-list {
 
 .video-slider__text-title {
   font-size: 2.75rem;
-  font-weight: bold;
+  font-family: 'LatoBold', sans-serif;
   text-transform: uppercase; }
 
 .video-slider__main-text {
@@ -3696,7 +3696,7 @@ ul.main-menu-link-list {
   .green-bg-block .green-bg-text-container {
     color: #ffffff;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-family: 'LatoBold', sans-serif;
     text-align: center;
     max-width: 43.75rem;
     margin: 3.75rem auto; }
@@ -3878,7 +3878,7 @@ ul.main-menu-link-list {
       flex-basis: 50%; }
     .steps-slider .step-content-container .step-title {
       font-size: 2.25rem;
-      font-weight: bold;
+      font-family: 'LatoBold', sans-serif;
       text-transform: uppercase;
       margin-bottom: 1.875rem; }
     .steps-slider .step-content-container .step-text {
@@ -4080,7 +4080,7 @@ footer {
   padding: 3.125rem 0.9375rem;
   min-height: 5.5rem;
   font-size: 0.75rem;
-  font-weight: bold;
+  font-family: 'LatoBold', sans-serif;
   z-index: 8; }
   footer a {
     color: inherit;
@@ -4254,7 +4254,7 @@ footer {
       z-index: 1; }
     .page__partner-cards .cards-wrapper .card-bold-text {
       text-align: center;
-      font-weight: bold;
+      font-family: 'LatoBold', sans-serif;
       z-index: 1; }
 
 /* FONT */
@@ -4354,7 +4354,7 @@ footer {
     margin-bottom: 1rem; }
   .mobile-package-section__content .section-subtitle {
     font-size: 1rem;
-    font-weight: bold;
+    font-family: 'LatoBold', sans-serif;
     margin-bottom: 1rem; }
   .mobile-package-section__content .section-text {
     font-size: 0.875rem; }
@@ -4428,7 +4428,7 @@ footer {
 
 .method-card__title {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-family: 'LatoBold', sans-serif;
   text-align: center;
   height: 5rem; }
 
@@ -4455,16 +4455,16 @@ footer {
 
 .article-title {
   font-size: 2.25rem;
-  font-weight: bold; }
+  font-family: 'LatoBold', sans-serif; }
 
 .bold {
-  font-weight: bold; }
+  font-family: 'LatoBold', sans-serif; }
 
 .next-article-links {
   display: flex;
   justify-content: space-between;
   font-size: 1.125rem;
-  font-weight: bold;
+  font-family: 'LatoBold', sans-serif;
   margin: 3.75rem 0; }
   .next-article-links a {
     color: inherit; }

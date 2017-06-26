@@ -58,7 +58,7 @@ header {
     color: inherit;
     text-transform: uppercase;
     font-size: rem-calc(14);
-    font-weight: bold;
+    font-family: 'LatoBold', sans-serif;
     padding-bottom: rem-calc(8);
 
     &:hover {
@@ -81,14 +81,14 @@ header {
 .header__phone {
   color: $success;
   line-height: rem-calc(18);
-  font-weight: bold;
+  font-family: 'LatoBold', sans-serif;
 }
 
 .header__chose-location {
   font-size: rem-calc(13);
   line-height: rem-calc(20);
   color: $gray;
-  font-weight: bold;
+  font-family: 'LatoBold', sans-serif;
   cursor: pointer;
 
   .fa {
@@ -140,7 +140,7 @@ header {
   li {
     padding: 0 rem-calc(25);
     text-transform: uppercase;
-    font-weight: bold;
+    font-family: 'LatoBold', sans-serif;
     font-size: rem-calc(14);
     cursor: pointer;
     visibility: hidden;
@@ -199,7 +199,7 @@ header {
   text-transform: uppercase;
   z-index: 10;
   font-size: rem-calc(14);
-  font-weight: bold;
+  font-family: 'LatoBold', sans-serif;
   transition: all .3s linear;
 
   &.circle {
@@ -266,7 +266,7 @@ header {
   background-color: $white;
   text-transform: uppercase;
   font-size: rem-calc(14);
-  font-weight: bold;
+  font-family: 'LatoBold', sans-serif;
   text-align: center;
   vertical-align: middle;
   line-height: rem-calc(32);

@@ -2,7 +2,7 @@
 
 html,
 body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "LatoRegular", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.42857143;
   color: #333333;
@@ -86,7 +86,7 @@ button[type="submit"] {
 .round-button {
   @include border-radius(18px);
   font-size: rem-calc(14);
-  font-weight: bold;
+  font-family: 'LatoBold', sans-serif;
   border: rem-calc(2) solid $default-border-color;
   height: rem-calc(36);
   padding: 0 $padding-lg;

@@ -6,6 +6,7 @@ header {
   top: 0;
   width: 100%;
   background-color: $white;
+  height: rem-calc(90);
 
   &.shadow {
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.17);

@@ -2971,7 +2971,8 @@ header {
   z-index: 10;
   top: 0;
   width: 100%;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  height: 5.625rem; }
   header.shadow {
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.17); }
   header .container {
@@ -3268,7 +3269,7 @@ ul.main-menu-link-list {
 
 .mobile-menu-wrapper {
   position: fixed;
-  top: 5.6875rem;
+  top: 5.625rem;
   bottom: 0;
   right: 0;
   overflow: auto;
@@ -3324,7 +3325,7 @@ ul.main-menu-link-list {
 
 .phone-mobile-menu {
   position: fixed;
-  top: 5.6875rem;
+  top: 5.625rem;
   right: 0;
   width: 20.1875rem;
   background-color: #ffffff;

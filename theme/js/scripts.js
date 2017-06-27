@@ -121,6 +121,9 @@ $(function(){
         $languageBtn.on('click', function() {
             $headerOverlay.toggleClass('show');
             $languageList.toggleClass('open');
+            if ($cityMenu.hasClass('show')) {
+                $cityMenu.toggleClass('show');
+            }
         });
 
         $languageListLiks.on('click', function() {

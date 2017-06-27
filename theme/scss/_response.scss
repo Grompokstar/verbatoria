@@ -193,12 +193,17 @@
 }
 
 @media (max-width: 767px) {
+  header {
+    height: rem-calc(63);
+  }
+
   .page {
     padding-top: rem-calc(61);
   }
 
   .header-flex-container {
     padding: $padding-sm 0;
+    height: rem-calc(63);
   }
 
   .header__logo {

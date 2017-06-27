@@ -2996,7 +2996,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5625rem 0; }
+  padding: 1.5625rem 0;
+  height: 5.625rem; }
 
 .header-flex-item {
   margin: 0 0.625rem;
@@ -4595,11 +4596,15 @@ footer {
   .package-section .package-section__title {
     font-size: 1rem; } }
 @media (max-width: 767px) {
+  header {
+    height: 3.9375rem; }
+
   .page {
     padding-top: 3.8125rem; }
 
   .header-flex-container {
-    padding: 0.625rem 0; }
+    padding: 0.625rem 0;
+    height: 3.9375rem; }
 
   .header__logo img {
     width: 180px; }

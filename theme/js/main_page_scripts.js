@@ -38,7 +38,7 @@ $(function(){
             var progress = 200 - (firstVideo.currentTime / duration) * 200;
 
             $playBtnCircle.attr('stroke-dashoffset', progress);
-            if (progress < 10) {
+            if (progress < 15) {
                 startVideoSlider();
             }
         }
@@ -215,7 +215,7 @@ $(function(){
             clickedStepId,
             $spincrement = $(".spincrement"),
             $clockOval = $('#clock-oval'),
-            step2Timer, step3Timer, stepReturnTimer,
+            step2Timer, step3Timer, timerStep1, timerStep2, stepReturnTimer,
             stepCircles = $('.step-item-circle'),
             stepDuration = 9000,
             $sliderBtns = $('.slider-btn'),
@@ -225,12 +225,35 @@ $(function(){
 
         $sliderBtnLeft.hide();
 
+        function showStep(stepId) {
+            var currentStepId = $('.step-item-icon.active').attr('data-step');
+            $sliderBtns.show();
+
+            if (stepId == 1) {
+                $sliderBtnLeft.hide();
+                $clockOval.removeClass('go-time');
+                $clockOval.addClass('go-time');
+                $(".spincrement-1").spincrement({duration: stepDuration});
+            } else if (stepId == 2) {
+                $(".spincrement-2").spincrement({duration: stepDuration/2});
+            } else if (stepId == 3) {
+                $('.diagram-bg').addClass('animate');
+                $sliderBtnRight.hide();
+            }
+
+            if (stepId != currentStepId) {
+                stepIcons.removeClass('active');
+                $('.step-item-icon[data-step="' + stepId +  '"]').addClass('active');
+                $('.step').removeClass('current');
+                $('#step-' + stepId).addClass('current');
+            }
+        }
+
         function startStepsAnimation() {
-            var circleCount = 0,
-                timerStep2;
-            stepIcons.get(0).click();
-            $sliderBtns.hide();
-            var timerStep1 = setInterval(function() {
+            var circleCount = 0;
+
+            showStep(1);
+            timerStep1 = setInterval(function() {
                 $(stepCircles.get(circleCount)).addClass('active');
                 if (circleCount <= 2) {
                     circleCount++;
@@ -240,8 +263,7 @@ $(function(){
             step2Timer = setTimeout(function() {
                 clearInterval(timerStep1);
                 stepCircles.removeClass('active');
-                stepIcons.get(1).click();
-                $sliderBtns.hide();
+                showStep(2);
 
                 timerStep2 = setInterval(function() {
                     $(stepCircles.get(circleCount)).addClass('active');
@@ -254,13 +276,11 @@ $(function(){
             step3Timer = setTimeout(function() {
                 clearInterval(timerStep2);
                 stepCircles.removeClass('active');
-                stepIcons.get(2).click();
-                $sliderBtns.hide();
+                showStep(3);
                 $('.diagram-bg').addClass('animate');
             }, stepDuration*2);
 
             stepReturnTimer = setTimeout(function() {
-                $stepIconsDisableOverlay.hide();
                 $sliderBtnLeft.click();
                 setTimeout(function() {
                     $sliderBtnLeft.click();
@@ -268,35 +288,24 @@ $(function(){
             }, stepDuration*3);
         }
 
+        function clearTimers() {
+            clearTimeout(step2Timer);
+            clearTimeout(step3Timer);
+            clearTimeout(stepReturnTimer);
+            clearInterval(timerStep1);
+            clearInterval(timerStep2);
+        }
 
         stepIcons.on('click', function() {
-            currentStepId = $('.step-item-icon.active').attr('data-step');
+            clearTimers();
+            stepCircles.removeClass('active');
             clickedStepId = $(this).attr('data-step');
-            $sliderBtns.show();
+            showStep(clickedStepId);
 
-            if (clickedStepId == 1) {
-                $sliderBtnLeft.hide();
-                $clockOval.removeClass('go-time');
-                $clockOval.addClass('go-time');
-                $(".spincrement-1").spincrement({duration: stepDuration});
-            } else if (clickedStepId == 2) {
-                $(".spincrement-2").spincrement({duration: stepDuration/2});
-            } else if (clickedStepId == 3) {
-                $('.diagram-bg').addClass('animate');
-                $sliderBtnRight.hide();
-            }
-
-            if (clickedStepId != currentStepId) {
-                stepIcons.removeClass('active');
-                $(this).addClass('active');
-                $('.step').removeClass('current');
-                $('#step-' + clickedStepId).addClass('current');
-            }
         });
 
         $sliderBtnLeft.on('click', function() {
-            clearTimeout(step2Timer);
-            clearTimeout(step3Timer);
+            clearTimers();
             currentStepId = $('.step.current').attr('data-step');
             $sliderBtns.show();
             if (Number(currentStepId) - 1 === 1) {
@@ -316,14 +325,14 @@ $(function(){
 
 
         $sliderBtnRight.on('click', function() {
-            clearTimeout(step2Timer);
-            clearTimeout(step3Timer);
+            clearTimers();
             currentStepId = $('.step.current').attr('data-step');
             $sliderBtns.show();
             if (Number(currentStepId) + 1 === 1) {
                 $sliderBtnLeft.hide();
             } else if (Number(currentStepId) + 1 === 3) {
                 $sliderBtnRight.hide();
+                $('.diagram-bg').addClass('animate');
             }
             $spincrement.spincrement({duration: stepDuration});
 

@@ -58,6 +58,9 @@ ul.main-menu-link-list {
   background-color: $white;
   text-transform: uppercase;
   transition: all .3s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &.circle {
     @include border-radius(50%)
@@ -68,8 +71,8 @@ ul.main-menu-link-list {
     border-color: $success;
     background-color: $success;
 
-    #Header, #btn_closeMainMenu {
-      fill: $white;
+    span:before {
+      color: $white !important;
     }
   }
 
@@ -77,8 +80,8 @@ ul.main-menu-link-list {
     background-color: $success-light;
     border-color: $success-light;
 
-    #Header, #btn_closeMainMenu {
-      fill: $white;
+    span:before {
+      color: $white !important;
     }
   }
 
@@ -96,10 +99,12 @@ ul.main-menu-link-list {
       background-color: $success-light;
     }
   }
-  svg {
+  span {
+    font-size: rem-calc(16);
+    width: 18px;
+    height: 18px;
     display: none;
-    cursor: pointer;
-    margin-left: 3px;
+    padding-top: 1px;
   }
 }
 

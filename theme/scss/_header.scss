@@ -103,7 +103,7 @@ header {
 
 .header-language-menu {
   position: absolute;
-  top: rem-calc(25);
+  top: rem-calc(27);
   right: rem-calc(75);
   z-index: 5;
 }
@@ -199,9 +199,10 @@ header {
   background-color: $white;
   text-transform: uppercase;
   z-index: 10;
-  font-size: rem-calc(14);
+  font-size: rem-calc(16);
   font-family: 'LatoBold', sans-serif;
   transition: all .3s linear;
+  padding-top: 2px;
 
   &.circle {
     @include border-radius(50%)

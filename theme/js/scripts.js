@@ -33,7 +33,7 @@ $(function(){
             $mainMenu.toggleClass('visible');
             $mobileMainMenu.toggleClass('visible');
             $('.main-menu-btn').toggleClass('close');
-            $('.main-menu-btn svg').toggleClass('visible');
+            $('.main-menu-btn span').toggleClass('visible');
             $('.overlay').toggleClass('visible');
             if ($mainMenu.hasClass('visible')) {
                 $body.addClass('overflow-hidden');

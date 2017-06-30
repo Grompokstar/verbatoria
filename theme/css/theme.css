@@ -3048,7 +3048,7 @@ header {
 
 .header-language-menu {
   position: absolute;
-  top: 1.5625rem;
+  top: 1.6875rem;
   right: 4.6875rem;
   z-index: 5; }
 
@@ -3120,9 +3120,10 @@ header {
   background-color: #ffffff;
   text-transform: uppercase;
   z-index: 10;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-family: 'LatoBold', sans-serif;
-  transition: all .3s linear; }
+  transition: all .3s linear;
+  padding-top: 2px; }
   .language-btn.circle {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -3232,7 +3233,10 @@ ul.main-menu-link-list {
   color: #c1c1c1;
   background-color: #ffffff;
   text-transform: uppercase;
-  transition: all .3s linear; }
+  transition: all .3s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .main-menu-btn.circle {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -3242,13 +3246,13 @@ ul.main-menu-link-list {
     color: #46c573;
     border-color: #46c573;
     background-color: #46c573; }
-    .main-menu-btn:hover #Header, .main-menu-btn:hover #btn_closeMainMenu {
-      fill: #ffffff; }
+    .main-menu-btn:hover span:before {
+      color: #ffffff !important; }
   .main-menu-btn:active {
     background-color: rgba(70, 196, 115, 0.5);
     border-color: rgba(70, 196, 115, 0.5); }
-    .main-menu-btn:active #Header, .main-menu-btn:active #btn_closeMainMenu {
-      fill: #ffffff; }
+    .main-menu-btn:active span:before {
+      color: #ffffff !important; }
   .main-menu-btn.close {
     background-color: #f5f5f5;
     color: #46c573; }
@@ -3258,10 +3262,12 @@ ul.main-menu-link-list {
     .main-menu-btn.close:active {
       color: #ffffff;
       background-color: rgba(70, 196, 115, 0.5); }
-  .main-menu-btn svg {
+  .main-menu-btn span {
+    font-size: 1rem;
+    width: 18px;
+    height: 18px;
     display: none;
-    cursor: pointer;
-    margin-left: 3px; }
+    padding-top: 1px; }
 
 .overlay {
   display: none;

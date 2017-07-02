@@ -3263,6 +3263,7 @@ ul.main-menu-link-list {
       color: #ffffff;
       background-color: rgba(70, 196, 115, 0.5); }
   .main-menu-btn span {
+    margin: auto;
     font-size: 1rem;
     width: 18px;
     height: 18px;

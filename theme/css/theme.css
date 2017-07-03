@@ -3607,8 +3607,9 @@ ul.main-menu-link-list {
   display: none;
   align-items: center;
   cursor: pointer;
-  margin-bottom: 1.09375rem;
-  order: 0; }
+  margin-bottom: 1rem;
+  order: 0;
+  overflow-y: visible; }
   .package-section.static {
     margin-top: 1.1875rem;
     padding-top: 2.03125rem;
@@ -3619,7 +3620,8 @@ ul.main-menu-link-list {
       flex-wrap: wrap;
       justify-content: space-between;
       width: 100%;
-      align-items: flex-end; }
+      align-items: flex-end;
+      line-height: 1rem; }
   .package-section .package-section__additional-text {
     color: #808080;
     position: absolute;
@@ -3639,7 +3641,8 @@ ul.main-menu-link-list {
     margin-right: 1.25rem; }
   .package-section .package-section__title {
     display: inline-block;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    line-height: 1.625rem; }
   .package-section.current .package-section__title {
     transition: all 0.2s linear;
     color: #ec5d04; }
@@ -4535,7 +4538,8 @@ footer {
         max-width: 100%; } }
 @media (min-width: 768px) and (max-width: 991px) {
   .package-section .package-section__title {
-    font-size: 1.375rem; }
+    font-size: 1.375rem;
+    line-height: 1.5rem; }
 
   .package-section-description {
     padding-left: 3.0625rem;
@@ -4556,7 +4560,12 @@ footer {
     padding-left: 6.125rem;
     padding-right: 0; }
   .steps-slider .step .right-block {
-    padding: 0 3.125rem; }
+    padding: 0 3.125rem;
+    width: 50%; }
+  .steps-slider .step .right-block-second-line .step-2-count {
+    font-size: 6rem; }
+  .steps-slider .step .right-block-second-line .right-block-title {
+    font-size: 1.625rem; }
 
   .main-page__partners {
     padding-left: 0.625rem;
@@ -4605,7 +4614,8 @@ footer {
     margin-bottom: 0.9375rem; }
 
   .package-section .package-section__title {
-    font-size: 1rem; } }
+    font-size: 1rem;
+    line-height: 1.125rem; } }
 @media (max-width: 767px) {
   header {
     height: 3.9375rem; }
@@ -4731,7 +4741,8 @@ footer {
     color: inherit; }
 
   .package-section .package-section__title {
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.125rem; }
 
   .package-section-description .section-description-title {
     font-size: 1.125rem; }

@@ -70,6 +70,7 @@
   .package-section {
     .package-section__title {
       font-size: rem-calc(22);
+      line-height: rem-calc(24);
     }
   }
 
@@ -108,7 +109,18 @@
       }
 
       .right-block {
-        padding: 0 rem-calc(50)
+        padding: 0 rem-calc(50);
+        width: 50%;
+      }
+
+      .right-block-second-line {
+        .step-2-count {
+          font-size: rem-calc(96);
+        }
+
+        .right-block-title {
+          font-size: rem-calc(26);
+        }
       }
     }
   }
@@ -188,6 +200,7 @@
   .package-section {
     .package-section__title {
       font-size: rem-calc(16);
+      line-height: rem-calc(18);
     }
   }
 }
@@ -364,6 +377,7 @@
   .package-section {
     .package-section__title {
       font-size: rem-calc(16);
+      line-height: rem-calc(18);
     }
   }
 

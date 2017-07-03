@@ -165,7 +165,7 @@ $(function(){
             currentPackage = $(this).attr('data-package');
             $packageSections.removeClass('show-section');
 
-            if (!desktop) {
+            if (!desktop && window.innerWidth < 768) {
                 $('.mobile-age-package__wrapper[data-package="' + currentPackage + '"]').addClass('visible');
                 $('body').addClass('overflow-hidden');
             }

@@ -103,8 +103,9 @@
   display: none;
   align-items: center;
   cursor: pointer;
-  margin-bottom: rem-calc(17.5);
+  margin-bottom: rem-calc(16);
   order: 0;
+  overflow-y: visible;
 
   &.static {
     margin-top: rem-calc(19);
@@ -118,6 +119,7 @@
       justify-content: space-between;
       width: 100%;
       align-items: flex-end;
+      line-height: 1rem;
     }
   }
 
@@ -149,6 +151,7 @@
   .package-section__title {
     display: inline-block;
     font-size: rem-calc(24);
+    line-height: rem-calc(26);
   }
 
   &.current {

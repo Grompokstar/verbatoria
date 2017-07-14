@@ -4509,12 +4509,12 @@ footer {
     border: none; }
     .main-menu-btn:hover {
       background-color: #ffffff; }
-      .main-menu-btn:hover #Header, .main-menu-btn:hover #btn_closeMainMenu {
-        fill: #46c573; }
+      .main-menu-btn:hover span:before {
+        color: #46c573 !important; }
     .main-menu-btn:active {
       background-color: #ffffff; }
-      .main-menu-btn:active #Header, .main-menu-btn:active #btn_closeMainMenu {
-        fill: #46c573; }
+      .main-menu-btn:active span:before {
+        color: #46c573 !important; }
     .main-menu-btn.close {
       background-color: #ffffff;
       color: #46c573; }

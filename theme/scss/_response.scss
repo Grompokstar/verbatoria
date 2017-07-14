@@ -18,16 +18,16 @@
     &:hover {
       background-color: $white;
 
-      #Header, #btn_closeMainMenu {
-        fill: $success;
+      span:before {
+        color: $success !important;
       }
     }
 
     &:active {
       background-color: $white;
 
-      #Header, #btn_closeMainMenu {
-        fill: $success;
+      span:before {
+        color: $success !important;
       }
     }
 

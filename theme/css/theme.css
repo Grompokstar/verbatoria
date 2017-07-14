@@ -3298,7 +3298,6 @@ ul.main-menu-link-list {
     margin: 0; }
     .mobile-main-menu ul li {
       text-align: center;
-      padding: 0.9375rem;
       border-bottom: solid 1px #e8e8e8;
       cursor: pointer;
       transition: all .3s linear; }
@@ -3307,7 +3306,10 @@ ul.main-menu-link-list {
       .mobile-main-menu ul li a {
         color: inherit;
         text-decoration: none;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        padding: 0.9375rem;
+        display: inline-block;
+        width: 100%; }
   .mobile-main-menu .submenu-toggle {
     text-align: center;
     text-transform: uppercase;

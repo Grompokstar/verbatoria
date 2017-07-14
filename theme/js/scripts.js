@@ -1,9 +1,14 @@
 $(function(){
 
     $(window).ready(function(){
+        var desktop = !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
         $('body').on('click', '[href*="#"]', function(e){
-            $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - 90}, 1000);
+            var topOffset = 90;
+
+            if (!desktop) { topOffset = 63 };
+
+            $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - topOffset}, 1000);
             e.preventDefault();
         });
 
